@@ -1,306 +1,132 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>my wiki</title>
-    <!-- markdown转换 -->
-    <script src="https://cdn.bootcss.com/showdown/1.3.0/showdown.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- import CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"/>
-    <!-- import Vue before Element -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <!-- import JavaScript -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CPFree Document</title>
 
-      :root {
-         --bg-clr: #303643;
-         --header-bg-clr: #303643;
-         --aside-bg-clr: #545c64;
-         --text-clr: #fff;
-         --active-text-clr: #ffd04b;
-         --spacing: 20px;
-      }
+  <!-- 解除其他平台的防盗链 -->
+  <meta name="referrer" content="never">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description...">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- 引入 css -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  
+  <link rel="stylesheet" type="text/css" href="static/css/myStyle-light.css"/>
+  
+  <!-- alert -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
+  <!-- latex -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 
-      .el-header,
-      .el-footer {
-        background-color: var(--bg-clr);
-        color: #333;
-        text-align: center;
-        line-height: 60px;
-      }
+  <!--网页标题左侧显示-->
+  <link rel="icon" href="https://gitee.com/veal98/images/raw/master/img/20210212163801.png" type="image/x-icon">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--收藏夹显示图标-->
+  <link rel="shortcut icon" href="https://gitee.com/veal98/images/raw/master/img/20210212163801.png" type="image/x-icon">
+</head>
+<body background="" style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;">
+  <div id="app">加载中...</div>
+  <a class="to-top">Top</a>
+  <script>
+    window.$docsify = {
+      el: '#app',
+      name: 'CPFree note',
+      nameLink: 'http://118.31.6.96/',
+      repo: 'https://github.com/sinjar-chen',
+      logo: '',
+      themeColor: 'rgb(102, 126, 233)',
+      loadNavbar: true,
+      auto2top:true,
+      coverpage: true,
+      onlyCover: true,
+      topMargin: 140,
+      // 加载 _sidebar.md
+      loadSidebar: true,
+      subMaxLevel: 3,
 
-      .el-aside {
-        background-color: var(--bg-clr);
-        color: #333;
-        text-align: center;
-        line-height: 100px;
-      }
-      .el-menu {
-         background-color: unset;
-         border-right: unset;
-      }
-      .el-submenu__title, .el-menu-item {
-         text-align: left;
-      }
+      //增加搜索框
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },
+   
+      footer: {
+        copy: '我是有',
+        auth: ' <strong>底线</strong>的啊',
+        pre: '<hr/>',
+        style: 'text-align: center;',
+      },
+      copyCode: {
+          buttonText: '复制到剪贴板',
+          errorText: '复制错误',
+          successText: '已复制!'
+      },
 
-
-      .el-main {
-        background-color: #e9eef3;
-        color: #333;
-        text-align: center;
-        line-height: 0;
-        padding: 0;
-      }
-      body {
-        margin: 0;
-        background-color: #333;
-      }
-      html,
-      body,
-      #app {
-        height: -webkit-fill-available;
-      }
-      iframe {
-        height: 100%;
-        width: 100%;
-        border: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app">
-      <el-container style="height: 100%;">
-        <el-header>
-         <el-menu
-           :default-active="activeIndex2"
-           class="el-menu-demo"
-           mode="horizontal"
-           @select="handleSelect"
-           background-color="var(--header-bg-clr)"
-           text-color="var(--text-clr)"
-           active-text-color="var(--active-text-clr)">
-           <el-menu-item index="1">处理中心</el-menu-item>
-           <el-submenu index="2">
-             <template slot="title">我的工作台</template>
-             <el-menu-item index="2-1">选项1</el-menu-item>
-             <el-menu-item index="2-2">选项2</el-menu-item>
-             <el-menu-item index="2-3">选项3</el-menu-item>
-             <el-submenu index="2-4">
-               <template slot="title">选项4</template>
-               <el-menu-item index="2-4-1">选项1</el-menu-item>
-               <el-menu-item index="2-4-2">选项2</el-menu-item>
-               <el-menu-item index="2-4-3">选项3</el-menu-item>
-             </el-submenu>
-           </el-submenu>
-           <el-menu-item index="3" disabled>消息中心</el-menu-item>
-           <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">blog</a></el-menu-item>
-           <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">wiki</a></el-menu-item>
-         </el-menu>
-        </el-header>
-        <el-container style="height: 100%;">
-          <el-aside width="250px">
-            <el-menu default-active="main-page" class="el-menu-vertical-demo"
-               @open="handleOpen" 
-               @close="handleClose"
-               @select="handleSelect"
-               :collapse="isCollapse"
-               background-color="var(--aside-bg-clr)"
-               text-color="var(--text-clr)"
-               active-text-color="var(--active-text-clr)">
-               <sidebar-item v-for="menu in asideList" :item="menu"/>
-            </el-menu>
-            <!-- <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-               <el-radio-button :v-show="isCollapse" :label="false">展开</el-radio-button>
-               <el-radio-button :v-show="!isCollapse" :label="true">收起</el-radio-button>
-             </el-radio-group> -->
-          </el-aside>
-          <el-main>
-            <iframe id="contentFrame" :src="this.frameSrc" ></iframe>
-          </el-main>
-        </el-container>
-      </el-container>
-    </div>
-
-    <script type="text/javascript">
-
-      function convert(){
-         var text = document.getElementById("oriContent").value;
-         var html = marked(text);
-         document.getElementById("result").innerHTML = html;
-         con(text);
+      'flexible-alerts': {
+        style: 'flat'
+      },
+      remoteMarkdown: {
+        tag: 'remoteMarkdownUrl',
       }
 
-      function con(markdownText){
-         var converter = new showdown.Converter();
-         //转换为HTML
-         var html = converter.makeHtml(markdownText);
-         //将HTML添加到你要展示的容器
-         document.getElementById("results").innerHTML = html;
-      }
+    }
+  </script>
 
-      // 左侧导航栏
-      var SidebarItem = Vue.extend({
-         props: {
-            item: {
-               type: Object,
-               required: true
-            }
-         },
-         template: ''
-            + ' <div>'
-            + '	<template v-if="item.children && item.children.length > 0">'
-            + '	   <el-submenu :index="item.url">'
-            + '	      <template slot="title">'
-            + '		      <i class="el-icon-menu"></i>'
-            + '		      <span slot="title">{{item.title}}</span>'
-            + '	      </template>'
-            + '	      <sidebar-item v-for="child in item.children" :item="child" />'
-            + '	   </el-submenu>'
-            + '	</template>'
-            + '	<template v-else>'
-            + '	   <el-menu-item :index="item.url">'
-            + '		  <i class="el-icon-menu"></i>'
-            + '		  <span slot="title">{{item.title}}</span>'
-            + '	   </el-menu-item>'
-            + '	</template>'
-            + ' </div>',
-         data: function () {
-            return {
-            }
-         },
-      });
-      Vue.component("sidebar-item", SidebarItem);
+  <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
+  <!-- 引入 script -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
-      new Vue({
-        el: "#app",
-        //钩子函数,页面加载执行
-        created: function() {
-        },
-        //钩子函数,页面加载完成后执行
-        mounted: function() {
-           this.handleSelect('https://gitee.com/countercurrent/programming-note/raw/master/question/question-distributed.md')
-        },
-        data: {
-            isCollapse: false,
-            frameSrc: "",
-            asideList: [
-               {
-                  title: 'index',
-                  url: 'https://gitee.com/countercurrent/programming-note/raw/master/question/question-distributed.md',
-                  icon: 'el-icon-setting',
-                  children: [
-                     {
-                        title: 'question-distributed335',
-                        url: 'https://gitee.com/countercurrent/programming-note/raw/master/question/question-distributed.md',
-                        icon: 'el-icon-setting',
-                        children: [],
-                     },
-                  ],
-               },
-               {
-                  title: 'question-distributed2',
-                  url: 'https://gitee.com/countercurrent/programming-note/raw/',
-                  icon: 'el-icon-setting',
-                  children: [
-                     {
-                        title: 'question-distributed334335',
-                        url: 'https://gitee.com/counter454current/progestion/question-distributed.md',
-                        icon: 'el-icon-setting',
-                        children: [],
-                     },
-                  ],
-               },
-               {
-                  title: 'question-distributed33',
-                  url: 'https://gitee.com/countercurrent/progestion/question-distributed.md',
-                  icon: 'el-icon-setting',
-                  children: [],
-               },
-               {
-                  title: 'question-distributed44',
-                  url: 'https://element.eleme.cn/#/zh-CN/component/menu',
-                  icon: 'el-icon-setting',
-                  children: [],
-               },
-               {
-                  title: 'question-distributed5',
-                  url: 'https://elemefe.github.io/element-react/#/zh-CN/quick-start',
-                  icon: 'el-icon-setting',
-                  children: [],
-               },
-            ],
-            headerList: [
-               {
-                  title: 'index',
-                  url: 'https://gitee.com/countercurrent/programming-note/raw/master/question/question-distributed.md',
-                  icon: 'el-icon-setting',
-                  children: [
-                     {
-                        title: 'question-distributed335',
-                        url: 'https://gitee.com/counter454current/progestion/question-distributed.md',
-                        icon: 'el-icon-setting',
-                        children: [],
-                     },
-                  ],
-               },
-               {
-                  title: 'question-distributed2',
-                  url: 'https://gitee.com/countercurrent/programming-note/raw/',
-                  icon: 'el-icon-setting',
-                  children: [
-                     {
-                        title: 'question-distributed335',
-                        url: 'https://gitee.com/counter454current/progestion/question-distributed.md',
-                        icon: 'el-icon-setting',
-                        children: [],
-                     },
-                  ],
-               },
-               {
-                  title: 'question-distributed33',
-                  url: 'https://gitee.com/countercurrent/progestion/question-distributed.md',
-                  icon: 'el-icon-setting',
-                  children: [],
-               },
-               {
-                  title: 'question-distributed44',
-                  url: 'https://element.eleme.cn/#/zh-CN/component/menu',
-                  icon: 'el-icon-setting',
-                  children: [],
-               },
-               {
-                  title: 'question-distributed5',
-                  url: 'https://elemefe.github.io/element-react/#/zh-CN/quick-start',
-                  icon: 'el-icon-setting',
-                  children: [],
-               },
-            ],
-        },
-        methods: {
-            handleSelect(item) {
-               console.log("handleSelect %o", item);
-               if (item.startsWith("http")) {
-                  this.frameSrc = item;
-               }
-            },
-            handleOpen(key, keyPath) {
-            },
-            handleClose(key, keyPath) {
-            },
-        },
-        computed: {},
-        watch: {
-          "table.conditions.busType": {
-            handler(newValue) {},
-            immediate: false
-          },
-          activeName: function() {
-            this.changeCaptcha();
-          }
-        }
-      });
-    </script>
-  </body>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/docsify/lib/plugins/zoom-image.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+  
+  <!-- docsify内置的代码高亮工具是 Prism。添加额外的语法支持需要通过CDN添加相应的语法文件 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+
+  <!-- CDN files for docsify-katex -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  
+  <!-- PWA 离线化 -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('/static/js/pwa.js')
+    }
+  </script>
+  
+  <!-- 访问量统计 -->
+  <!-- 我的阿里云服务器 G-JW67PQZXGS -->
+  <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js" data-ga="G-JW67PQZXGS"></script> -->
+
+  <!-- 置顶插件 -->
+  <script src="static/js/jquery-1.11.3.min.js"></script>
+  <script src="static/js/jquery.toTop.min.js"></script>
+  <script>
+    $('.to-top').toTop();
+  </script>
+
+  <!-- Markdown 引用样式美化 -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
+</body>
 </html>

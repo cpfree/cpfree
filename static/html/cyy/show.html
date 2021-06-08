@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8;"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="robots" content="all" />
+  <meta name="robots" content="index,follow"/>
+  <link rel="stylesheet" type="text/css" href="https://qzone.qq.com/gy/404/style/404style.css">
+  <link rel="stylesheet" type="text/css" href="s-text.css">
+
+  <style>
+      /* Main styles */
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+      .text {
+      fill: none;
+      stroke-width: 5;
+      stroke-dasharray: 0 300;
+      stroke-dashoffset: 0;
+      }
+
+      .text:nth-child(3n + 1) {
+      stroke: #FFFFFF;
+         animation: stroke 10s  ease-in-out forwards;  
+
+      }
+      .text:nth-child(3n + 2) {
+      stroke: #808080;
+      animation: stroke1 10s  ease-in-out forwards;
+
+      }
+
+      .text:nth-child(3n + 3) {
+      stroke: #696969;
+      animation: stroke2 10s  ease-in-out forwards;
+
+      }
+
+
+      @keyframes stroke {
+      100% {
+         stroke-dashoffset: 1000;
+         stroke-dasharray: 80 160;
+      }
+      }
+
+      @keyframes stroke1 {
+      100% {
+         stroke-dashoffset: 1080;
+         stroke-dasharray: 80 160;
+      }
+      }
+
+
+      @keyframes stroke2 {
+      100% {
+         stroke-dashoffset: 1160;
+         stroke-dasharray: 80 160;
+      }
+      }
+      /* Other styles */
+      html, body {
+      height: 100%;
+      }
+
+      body {
+      background: #000000;
+      background-size: .2em 100%;
+      font: 12.5em/1 Open Sans, Impact;
+      text-transform: uppercase;
+      margin: 0;
+      }
+
+      svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      canvas{
+         display: block;
+      }
+      body {
+         background:#0a0a0a;
+         overflow:hidden;
+      }
+  </style>
+
+</head>
+<body>
+  <svg viewBox="-50 0 1450 300">
+  <!-- Symbol -->
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+       陈莹莹吃大屁！    
+    </text>
+  </symbol>  
+  <!-- Duplicate symbols -->
+  <use xlink:href="#s-text" class="text"
+       ></use>
+  <use xlink:href="#s-text" class="text"
+       ></use>
+  <use xlink:href="#s-text" class="text"
+       ></use>
+</svg>
+<canvas id="canvas"></canvas>
+</body>
+
+
+<script>
+   function $(id){
+      return document.getElementById(id);
+   }
+   //画布 的大小设置
+   var mywindow=window.screen;
+   var canvas=$("canvas");
+   canvas.width=mywindow.width;
+   canvas.height=mywindow.height;
+   
+   //要输出的信息
+   var str="0123456789";
+   str=str.split("");
+   var fontSize=16;//输出字体的大小
+   //每列显示多少个信息
+   var cols=canvas.width/fontSize; 
+   //数组，统计下落的位置
+   var drops=[];
+   for(var i=0;i<cols;i++){
+      drops[i]=1;
+   }
+   //
+   var ctx=canvas.getContext("2d");
+   function draw(){
+      /**
+       *这的黑客帝国：
+         * 获取页面的 大小 包括宽度和高度
+         * 用cols获取能够宽度加载列数
+         * drops加载每一列的位置
+         * drops[2]=10 2为第二排的 top为10
+         */
+      ctx.fillStyle="rgba(0,0,0,0.05)";
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+      
+      ctx.fillStyle="green";
+      ctx.font=fontSize+"px arial";
+      for(var i=0;i<cols;i++){
+         
+         var text=str[ Math.floor( Math.random() * (str.length) ) ];
+//				console.info("x-"+i*fontSize);
+//				console.info("y-"+drops[i]*fontSize);
+         ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+            if(drops[i]*fontSize > canvas.height || Math.random() > 0.95)
+            drops[i] = 0;//把位置恢复到最上面
+            //控制下落的位置
+            drops[i]++;
+      }
+   }
+   setInterval(draw,33);
+
+</script>
+</html>
