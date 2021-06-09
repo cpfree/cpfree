@@ -1,4 +1,6 @@
-* [game](/static-res/html/game/)
+* [game](/static/html/game/)
+   * [2048](/static/html/game/game2048)
+   * [五子棋](/static/html/game/gobang)
 <!-- * 快速入门 -->
 * 内容导航
     * **预备知识**

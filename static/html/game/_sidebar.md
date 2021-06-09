@@ -1,5 +1,5 @@
 <!-- docs/_sidebar.md -->
 
-* [game](/static-res/html/game/)
-   * [game2048](/static-res/html/game/game2048)
-   * [gobang](/static-res/html/game/gobang)
+* [game](/static/html/game/)
+   * [game2048](/static/html/game/game2048)
+   * [gobang](/static/html/game/gobang)

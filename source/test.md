@@ -14,5 +14,5 @@ show tile
 
 ---
 
-![哈哈](static-res/svg/txt.svg)
+![哈哈](static/svg/txt.svg)
 source\test.md
