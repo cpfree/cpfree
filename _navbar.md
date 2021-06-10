@@ -14,16 +14,6 @@
         * [你的第一个插件](/get-started/your-first-extension.md)
         * [解析插件结构](/get-started/extension-anatomy.md)
         * [小结](/get-started/wrapping-up.md)
-    * **开发插件**
-        * [测试插件](/working-with-extensions/testing-extension.md)
-        * [发布插件](/working-with-extensions/publish-extension.md)
-        * [打包插件](/working-with-extensions/bundling-extension.md)
-        * [持续集成](/working-with-extensions/continuous-integration.md)
-    * **插件功能**
-        * [概述](/extension-capabilities/readme.md)
-        * [常用功能](/extension-capabilities/common-capabilities.md)
-        * [主题](/extension-capabilities/theming.md)
-        * [扩展工作台](/extension-capabilities/extending-workbench.md)
     * **插件指南**
         * [概述](/extension-guides/readme.md)
         * [命令](/extension-guides/command.md)

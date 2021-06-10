@@ -7,7 +7,7 @@
 1. F1, 或 Ctrl + P 打开vscode 命令窗口
 
 2. 输入 `snippet` 或 其它命令后选择 `配置用户代码片段`.
-   ![配置模板代码](2021-05-14-16-45-43.png)
+   ![配置模板代码](https://gitee.com/cpfree/picture-warehouse/raw/master/pic/20210610122755.png)
 
 3. 输入脚本
 
