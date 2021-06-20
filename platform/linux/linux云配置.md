@@ -141,10 +141,6 @@
 
 查看最新教程
 
-安装redis 密码设置为CPF@4823
-Mysql root-> locathost 无密码
-mysql sinjar->% 密码 Sinjar@4823
-
 #### mysql 安装笔记
 
 mysql 8.0 yum_CentOS8 安装 MySQL8.0（yum）
