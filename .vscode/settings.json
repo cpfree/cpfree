@@ -1,5 +1,6 @@
 {
    "editor.tabSize": 3,
    "editor.wordWrapColumn": 160,
+   "editor.detectIndentation": false,
 
 }
