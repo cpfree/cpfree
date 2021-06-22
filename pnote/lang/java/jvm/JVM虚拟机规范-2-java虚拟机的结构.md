@@ -97,8 +97,8 @@ string pool中存的是引用值而不是具体的实例对象，字符串常量
 
 当java文件被编译成class文件之后，会在class文件中生成我们所说的class常量池，class文件中除了包含类的版本、字段、方法、接口等描述信息外，还有一项信息就是常量池(constant pool table)，用于存放编译器生成的各种字面量(文本字符串、被声明为final的常量、基本数据类型的值)和符号引用(类和接口的全限定名、字段的名称和描述符、方法的名称和描述符)。
 
-![](2021-06-22-15-53-55.png)
-![](2021-06-22-15-55-31.png)
+![常量池结构示例图](https://gitee.com/cpfree/picture-warehouse/raw/master/pic1/2021-06-22-15-53-55.png)
+![class常量池相关属性结构](https://gitee.com/cpfree/picture-warehouse/raw/master/pic1/2021-06-22-15-55-31.png)
 
 #### 运行时常量池
 
