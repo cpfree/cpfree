@@ -1,0 +1,644 @@
+卷 programming 的文件夹 PATH 列表
+卷序列号为 C6BC-104C
+P:.
+│  .nojekyll
+│  guide.md
+│  index.html
+│  README.md
+│  td.txt
+│  _coverpage.md
+│  _navbar.md
+│  _sidebar.md
+│  
+├─.project
+│      info-dev.md
+│      info-file.md
+│      note-file.md
+│      
+├─life
+│  │  personal-soft.md
+│  │  pro-dubbo&zookeeper.md
+│  │  store-website.md
+│  │  tip.md
+│  │  tmp.md
+│  │  成为研究生真的会比直接找工作要好吗.md
+│  │  搭建一个个人wiki.md
+│  │  
+│  ├─book-note
+│  │      就是因为没时间才什么都办得到.md
+│  │      金字塔原理.md
+│  │      
+│  ├─communicate
+│  │      20套情商交往术.md
+│  │      chess-summary.md
+│  │      一位华为财务经理离职后给下属的12条建议.md
+│  │      果壳教育.md
+│  │      
+│  ├─essay
+│  │      ROG幻16购买体验.md
+│  │      关于我注册微信订阅号那点事.md
+│  │      有一种毁漫叫翻拍.md
+│  │      
+│  ├─FinancialManagement
+│  │  │  保险.md
+│  │  │  股票经验.md
+│  │  │  
+│  │  ├─class-maeeting
+│  │  │      20200222.md
+│  │  │      
+│  │  ├─extra
+│  │  │      时间去哪了.md
+│  │  │      
+│  │  └─StockJuniorTrainingCamp
+│  │      └─DailyShare
+│  │              每日分析.md
+│  │              
+│  └─wisdom
+│          21个终身受用的顶级思维.md
+│          study method.md
+│          不想学习的话看一下.md
+│          开眼.md
+│          引力本质.md
+│          张一鸣近10年的微博.md
+│          思维架构.md
+│          我的记事.md
+│          时间.md
+│          时间管理.md
+│          朋友圈不会告诉你的人生真相.md
+│          行事作风.md
+│          言论.md
+│          
+├─pbase
+│  ├─architecture
+│  │  │  question.md
+│  │  │  负载均衡.md
+│  │  │  面对海量请求,缓存设计还应该考虑哪些问题.copy.md
+│  │  │  高并发问题解决.md
+│  │  │  
+│  │  ├─base
+│  │  │      0架构-基本概念.md
+│  │  │      架构演进.turn.md
+│  │  │      
+│  │  ├─distributed
+│  │  │      分布式漫谈.md
+│  │  │      分布式相关问题.md
+│  │  │      分布式知识体系.md
+│  │  │      微服务下的分布式服务设计.md
+│  │  │      
+│  │  └─微服务
+│  │          服务治理.md
+│  │          服务注册与发现.md
+│  │          
+│  ├─arithmetic
+│  │  │  SortArthmetic.md
+│  │  │  
+│  │  └─special number
+│  │          prime.md
+│  │          
+│  ├─computer-base
+│  │  │  物理内存和虚拟内存.md
+│  │  │  系统内核空间和用户空间.md
+│  │  │  通信协议.md
+│  │  │  
+│  │  └─io
+│  │      │  io-summary.md
+│  │      │  
+│  │      └─nio
+│  │              io-base.md
+│  │              nio.md
+│  │              
+│  ├─data-structure
+│  │      tree-summary.md
+│  │      
+│  ├─design-pattern
+│  │  │  pattern-summary.md
+│  │  │  策略模式与SPI机制的区别.md
+│  │  │  策略模式和桥接模式.md
+│  │  │  
+│  │  └─structural
+│  │          flyweight-pattern.md
+│  │          
+│  ├─logic-arthimetic
+│  │      服务熔断与降级.md
+│  │      服务限流算法.md
+│  │      
+│  ├─network
+│  │      流量整形.md
+│  │      网络传输.md
+│  │      
+│  ├─software-engineering
+│  │      误区.md
+│  │      软件工程.md
+│  │      软件开发模型.md
+│  │      软件生命周期.md
+│  │      
+│  └─threads
+│      │  ThreadPool.md
+│      │  并发基础.md
+│      │  
+│      └─juc
+│              ReentrantLock.md
+│              
+├─pblog
+│  ├─original
+│  │  │  README.md
+│  │  │  
+│  │  ├─code
+│  │  │      java发送Http请求笔记.md
+│  │  │      java获取包下所有类方法.md
+│  │  │      Java读取粘贴板内容.md
+│  │  │      
+│  │  ├─config
+│  │  │  │  mybatis双数据源.md
+│  │  │  │  
+│  │  │  └─日志乱码
+│  │  │          IDEA控制台乱码原理性深入研究分析与解决方案.md
+│  │  │          IDEA控制台乱码解决方案.md
+│  │  │          IDEA日志乱码-研究篇.md
+│  │  │          IDE开发乱码问题.md
+│  │  │          乱码统一解决方案,愿世界没有乱码.md
+│  │  │          
+│  │  ├─cosycode
+│  │  │      singleton.md
+│  │  │      
+│  │  ├─design
+│  │  │  │  springMVC 文件上传.md
+│  │  │  │  文件表设计.md
+│  │  │  │  权限框架表设计.md
+│  │  │  │  
+│  │  │  ├─bit-data-map
+│  │  │  │      binary-data-map.md
+│  │  │  │      endpoint-io-transfer.md
+│  │  │  │      
+│  │  │  ├─closure-proxy
+│  │  │  │      闭包代理模式-初创篇.md
+│  │  │  │      闭包代理模式-集成篇.md
+│  │  │  │      闭包代理模式.md
+│  │  │  │      
+│  │  │  └─code-dict
+│  │  │          巧用枚举类管理字典表.md
+│  │  │          
+│  │  ├─exp
+│  │  │      关于编程中函数和方法的一些感悟.md
+│  │  │      数据获取方案.md
+│  │  │      
+│  │  ├─other
+│  │  │      Mysql5.7升级至8版本流程及事项.md
+│  │  │      window-command-mklink.md
+│  │  │      window交互.md
+│  │  │      低代码实现window右键文件创建符号链接.md
+│  │  │      第九届中国软件杯大学生赛题.md
+│  │  │      
+│  │  ├─qa
+│  │  │      64匹马-8个赛道-找出跑得最快的4匹马.md
+│  │  │      面试题目=一个抽奖池设计.md
+│  │  │      
+│  │  ├─solution
+│  │  │      jar&源代码比对方案.md
+│  │  │      Robot对象实现打印中英文字符.md
+│  │  │      分享两个项目中不让用但在私下用的很爽的异常处理方式.md
+│  │  │      分布式架构系统生成全局唯一序列号.md
+│  │  │      如何在没有复制权限的情况下,把Citrix下载到本地电脑.md
+│  │  │      将Mysql中的为空的字段全部置为EMPTY_STRING.md
+│  │  │      批量测试IP和端口号是否连通.md
+│  │  │      本地Host文件解析域名后访问阿里云服务器,结果请求被拦截,提示备案问题的解决方式.md
+│  │  │      
+│  │  └─study
+│  │          从设计角度搞懂PECS原则.md
+│  │          函数式接口与lambda表达式的关系.md
+│  │          
+│  └─reproduced
+│          jquery替换DOM标签.turn.md
+│          WebService 入门超详细实例.copy.md
+│          并发环境下，先操作数据库还是先操作缓存.copy.md
+│          零拷贝原理及java实现.turn.md
+│          
+├─platform
+│  ├─client
+│  │      picgo.md
+│  │      secureCrt.md
+│  │      
+│  ├─frame
+│  │  └─docsify
+│  │          docsify-custom.md
+│  │          
+│  ├─IDE
+│  │      idea-config.md
+│  │      idea-problem.md
+│  │      vscode-config.md
+│  │      
+│  ├─linux
+│  │  │  fileRelational.md
+│  │  │  linux struct.md
+│  │  │  linux云配置.md
+│  │  │  questions.md
+│  │  │  systemCommandRelation.md
+│  │  │  tip-linux.md
+│  │  │  utils.md
+│  │  │  VMware使用相关.md
+│  │  │  防火墙.md
+│  │  │  
+│  │  ├─installs
+│  │  │      docker-image-config.md
+│  │  │      docker-install.md
+│  │  │      git-install.md
+│  │  │      jdk-install.md
+│  │  │      maven-install.md
+│  │  │      mysql-install.md
+│  │  │      node-install.md
+│  │  │      other-plugin-install.md
+│  │  │      
+│  │  ├─linux-command
+│  │  │  │  command-user.md
+│  │  │  │  linux-command-path.md
+│  │  │  │  linux-command.md
+│  │  │  │  
+│  │  │  └─.doc
+│  │  │      └─.img
+│  │  └─linux-config
+│  │          linux-config-user.md
+│  │          linux-network-firewall.md
+│  │          挂载磁盘.md
+│  │          
+│  └─soft
+│          beyond-compare.md
+│          
+├─pnote
+│  ├─db
+│  │  │  db questions.md
+│  │  │  db-problem-scenario.md
+│  │  │  db.md
+│  │  │  db分类.md
+│  │  │  
+│  │  ├─common
+│  │  │      事务相关.md
+│  │  │      存储引擎.md
+│  │  │      存储数据结构.md
+│  │  │      数据库设计.md
+│  │  │      索引.md
+│  │  │      
+│  │  ├─MySql
+│  │  │  │  mysql-架构.md
+│  │  │  │  Mysql.md
+│  │  │  │  数据库慢的原因.md
+│  │  │  │  
+│  │  │  └─sql
+│  │  │          Sql.md
+│  │  │          tip.md
+│  │  │          当记录不存在时insert,当记录存在时update.copy.md
+│  │  │          时间处理函数.md
+│  │  │          表结构相关sql语法.md
+│  │  │          
+│  │  ├─nosql
+│  │  │  └─redis
+│  │  │          cache.md
+│  │  │          redis command.md
+│  │  │          redis.conf
+│  │  │          redis.md
+│  │  │          redis基础篇.md
+│  │  │          
+│  │  ├─question
+│  │  │      sql 练习.md
+│  │  │      
+│  │  └─sql
+│  │          join中on和where的区别.copy.md
+│  │          sql-script.md
+│  │          sql优化.md
+│  │          
+│  ├─deploy
+│  │  ├─build
+│  │  │      maven-command.md
+│  │  │      
+│  │  └─vcs
+│  │          git.md
+│  │          
+│  ├─framework
+│  │  ├─dubbo
+│  │  │      dubbo-负载均衡.md
+│  │  │      
+│  │  ├─log
+│  │  │      log4j-config.md
+│  │  │      log4j.xml.md
+│  │  │      log4j2.xml.md
+│  │  │      
+│  │  ├─mybatis
+│  │  │  │  mybatis introduction.md
+│  │  │  │  mybatis-batch-config.blog.md
+│  │  │  │  mybatis-config-demo.blog.md
+│  │  │  │  mybatis-config-demo.copy.md
+│  │  │  │  mybatis原理.md
+│  │  │  │  questions.md
+│  │  │  │  sql.md
+│  │  │  │  条件sql.md
+│  │  │  │  测试.md
+│  │  │  │  
+│  │  │  └─generator
+│  │  │          mybatis-generator.md
+│  │  │          
+│  │  ├─quartz
+│  │  │      quartz-summary.md
+│  │  │      
+│  │  ├─shiro
+│  │  │      shiro 认证流程.md
+│  │  │      shiro.md
+│  │  │      tip.md
+│  │  │      
+│  │  ├─spring
+│  │  │  │  spring-annotation.md
+│  │  │  │  spring-集成.md
+│  │  │  │  spring.md
+│  │  │  │  spring.q.md
+│  │  │  │  注意点.md
+│  │  │  │  
+│  │  │  ├─delete
+│  │  │  │      refresh().java.md
+│  │  │  │      
+│  │  │  ├─spring-config
+│  │  │  │      log4j.properties
+│  │  │  │      spring other.md
+│  │  │  │      
+│  │  │  ├─spring-note
+│  │  │  │      AOP 介绍.md
+│  │  │  │      IOC 容器的依赖注入.md
+│  │  │  │      IOC 容器的初始化.md
+│  │  │  │      Spring 学习路线.md
+│  │  │  │      spring 相关方法.md
+│  │  │  │      spring 简介.md
+│  │  │  │      spring 配置相关.md
+│  │  │  │      spring-bean.md
+│  │  │  │      spring-factory.md
+│  │  │  │      spring-question.md
+│  │  │  │      SpringMVC.md
+│  │  │  │      
+│  │  │  ├─spring-tx
+│  │  │  │      spring 事务篇.md
+│  │  │  │      
+│  │  │  ├─spring-usage
+│  │  │  │      Bean 配置.md
+│  │  │  │      
+│  │  │  └─src-code
+│  │  │      │  BeanFactory.md
+│  │  │      │  study1.md
+│  │  │      │  
+│  │  │      └─bean 类和接口关系
+│  │  │              class and inter.md
+│  │  │              
+│  │  ├─spring-cloud
+│  │  │      spring-cloud-summary.md
+│  │  │      
+│  │  ├─spring-mvc
+│  │  │      spring-mvc-usage.md
+│  │  │      
+│  │  ├─srping-boot
+│  │  │      springboot 学习笔记1.md
+│  │  │      springboot 开发笔记.md
+│  │  │      SpringBoot自动装配源码分析.md
+│  │  │      spring注解配置.md
+│  │  │      
+│  │  └─test
+│  │          junit.md
+│  │          
+│  ├─front-end
+│  │  │  ajax.md
+│  │  │  
+│  │  ├─html
+│  │  │      html-tip.md
+│  │  │      
+│  │  └─jquery
+│  │          jquerynote1.md
+│  │          
+│  ├─lang
+│  │  │  asm.md
+│  │  │  cron-lang.md
+│  │  │  date-lang.md
+│  │  │  etl.md
+│  │  │  markdown-lang.md
+│  │  │  regex-lang.md
+│  │  │  
+│  │  ├─java
+│  │  │  │  java-tip.md
+│  │  │  │  jnlp.md
+│  │  │  │  
+│  │  │  ├─jvm
+│  │  │  │      ClassLoader 加载机制.md
+│  │  │  │      javaSE commons.md
+│  │  │  │      Java内存模型(JMM)及volatile关键字.md
+│  │  │  │      JVM 规范.md
+│  │  │  │      JVM虚拟机规范-2-java虚拟机的结构.md
+│  │  │  │      
+│  │  │  ├─jweb
+│  │  │  │  ├─JSP
+│  │  │  │  │      JSP.md
+│  │  │  │  │      
+│  │  │  │  └─servlet
+│  │  │  │          servlet 配置.md
+│  │  │  │          
+│  │  │  ├─se
+│  │  │  │  │  序列化手段.md
+│  │  │  │  │  
+│  │  │  │  ├─base
+│  │  │  │  │      clone.md
+│  │  │  │  │      date.md
+│  │  │  │  │      exception.md
+│  │  │  │  │      java-reflect.md
+│  │  │  │  │      java-template.md
+│  │  │  │  │      serializable.md
+│  │  │  │  │      
+│  │  │  │  ├─class
+│  │  │  │  │      java-class-compile.md
+│  │  │  │  │      java-class-summary.md
+│  │  │  │  │      java-inner-class.md
+│  │  │  │  │      
+│  │  │  │  ├─technique
+│  │  │  │  └─thread
+│  │  │  │      │  Synchronized 详解.md
+│  │  │  │      │  并发编程基础.md
+│  │  │  │      │  监视器和对象锁.md
+│  │  │  │      │  
+│  │  │  │      └─juc
+│  │  │  │              ExecutorService.md
+│  │  │  │              
+│  │  │  └─source-analysis
+│  │  │          ThreadLocalRandom.copy.md
+│  │  │          
+│  │  └─js
+│  │          Array.md
+│  │          JavaScript学习笔记1.md
+│  │          JavaScript知识点.md
+│  │          js原型.md
+│  │          propotypes.md
+│  │          util.js
+│  │          闭包.md
+│  │          
+│  └─middleware
+│      ├─elasticsearch
+│      │      elasticsearch-install.md
+│      │      elasticsearch-summary.md
+│      │      
+│      ├─mq
+│      │  │  jms.md
+│      │  │  mq-summary.md
+│      │  │  
+│      │  ├─activeMQ
+│      │  │      activeMQ useful.md
+│      │  │      
+│      │  ├─kafka
+│      │  │      kafka.md
+│      │  │      
+│      │  ├─rabbitMQ
+│      │  │      rabbitMQ安装.md
+│      │  │      
+│      │  └─rocketMQ
+│      │          rocketMQ 安装配置篇.md
+│      │          
+│      ├─webserver
+│      │  ├─nginx
+│      │  │      nginx install and config.md
+│      │  │      nginx.md
+│      │  │      
+│      │  └─tomcat
+│      │          tomcat.md
+│      │          
+│      ├─zookeeper
+│      │      zookeeper-design.md
+│      │      zookeeper-install.md
+│      │      zookeeper-note.md
+│      │      zookeeper-question.md
+│      │      zookeeper-usage.md
+│      │      zookeeper选举机制.md
+│      │      
+│      └─zookeeper+dubbo
+│              dubbo 入门笔记.md
+│              分布式设计.md
+│              
+├─pqa
+│  │  architecture-question.md
+│  │  concept-question.md
+│  │  distributed-question.md
+│  │  Interviewer-psychoanalysis.md
+│  │  mybatis.md
+│  │  protocol-question.md
+│  │  todo-question.md
+│  │  tomcat.md
+│  │  zookeeper面试题.md
+│  │  打印机(Ibizhi面试题).md
+│  │  
+│  ├─algorithm
+│  │      aq-code.md
+│  │      aq-wisdom.md
+│  │      
+│  ├─db
+│  │      oracle.md
+│  │      
+│  ├─lang
+│  │  └─java
+│  │          java-base.md
+│  │          java-class.md
+│  │          java-code-question.md
+│  │          java-question.md
+│  │          
+│  ├─other
+│  │  │  开发技巧.md
+│  │  │  
+│  │  └─复习
+│  │          分布式专题.md
+│  │          分布式实战.md
+│  │          多线程知识.md
+│  │          
+│  ├─study record
+│  │      need study.md
+│  │      
+│  ├─智力题
+│  ├─知识体系
+│  │      DB.md
+│  │      FrameWork.md
+│  │      JavaSE.md
+│  │      other.md
+│  │      中间件.md
+│  │      并发编程.md
+│  │      性能优化.md
+│  │      总体知识体系.md
+│  │      数据结构和算法.md
+│  │      相关概念.md
+│  │      设计模式.md
+│  │      
+│  ├─知识点相关
+│  │      Spring面试题.md
+│  │      面试题.md
+│  │      
+│  └─配置问题
+│          commons.md
+│          乱码问题.md
+│          
+├─source
+│  └─logic
+│          滑动窗口算法代码实现.java
+│          
+├─static
+│  ├─backup
+│  ├─config
+│  ├─css
+│  │      myStyle-dark.css
+│  │      myStyle-light.css
+│  │      
+│  ├─docsify
+│  │  ├─css
+│  │  │      font-awesome.min.css
+│  │  │      katex.min.css
+│  │  │      myStyle-light.css
+│  │  │      sweetalert.min.css
+│  │  │      vue.css
+│  │  │      
+│  │  └─js
+│  │          docsify-copy-code.js
+│  │          docsify-footer-enh.min.js
+│  │          docsify-katex.js
+│  │          docsify-plugin-flexible-alerts.js
+│  │          docsify-remote-markdown.min.js
+│  │          docsify.min.js
+│  │          emoji.min.js
+│  │          jquery-1.11.3.min.js
+│  │          jquery.toTop.min.js
+│  │          prism-bash.min.js
+│  │          prism-c.min.js
+│  │          prism-cpp.min.js
+│  │          prism-css.min.js
+│  │          prism-java.min.js
+│  │          prism-javascript.min.js
+│  │          prism-powershell.min.js
+│  │          prism-properties.min.js
+│  │          prism-python.min.js
+│  │          prism-sql.min.js
+│  │          prism-yaml.min.js
+│  │          search.min.js
+│  │          zoom-image.min.js
+│  │          
+│  ├─html
+│  │  │  50x.html
+│  │  │  index.html
+│  │  │  jump.html
+│  │  │  
+│  │  ├─game
+│  │  │      game2048.html
+│  │  │      game2048.md
+│  │  │      gobang.html
+│  │  │      gobang.md
+│  │  │      README.md
+│  │  │      _sidebar.md
+│  │  │      
+│  │  └─store
+│  │          setting.html
+│  │          
+│  ├─img
+│  │      favicon.ico
+│  │      png-0012.png
+│  │      
+│  └─js
+│          jquery-1.11.3.min.js
+│          jquery.toTop.min.js
+│          pwa.js
+│          
+└─work
+    └─management
+            okr.md
+            
