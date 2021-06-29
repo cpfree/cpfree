@@ -1,4 +1,8 @@
 
+做事情的时候, 总是想着先把一些东西给做完, 并不管它是否重要, 但是这些事情可能根本不重要, 过一段时间, 它们就变得毫无意义. 先做重要的事情, 在做不重要的事情.
+
+
+
 1. 以下关于子类和父类的到底是几个对象，也就是影响到父类和子类获取的是否是同一个锁（以下解释来自博客 http://blog.csdn.net/aitangyong/article/details/22695399）
 
  * 使用A a = new A()这种方式创建对象的时候，JVM会在后台给我们分配内存空间，然后调用构造函数执行初始化操作，
@@ -24,36 +28,5 @@
 
 ![fdfd](./knowledge/svg_JavaArchitectsKnowledgeSystem.svg)
 
- ## 闭包是什么
-
- js : 将
-
-mysql
-
-Compressed TAR Archive 二进制包安装方式, 即免安装解压运行版
-TAR 安装板
-
-```js
-cedaClientInfo = new ClientInfo();
-var uul = eval('({"wsUrl":"ws://192.168.2.2:9063","sioUrl":"http://192.168.2.2:9066","forcePolling":false})');
-cedaConnection = new CedaWebSocketConnection(url, cedaClientInfo);
-```
-
-密码 cpf
-
-[baidu]
-
-<script>
-let a = 'rwerwerwerwe';
-</script>
-
-[prefix]:http://w
-
-[baidu]:[prefix]ww.baidu.com
-
+## 闭包是什么
 ## 如何保证 java 程序仅仅执行一次
-
-1. 占用文件
-2. 占用端口
-
-
