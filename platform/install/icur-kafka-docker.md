@@ -108,9 +108,11 @@ docker pull sheepkiller/kafka-manager
 
 ### 6. kafka-manager安装
 
-```shell
-docker run -d --name kafka-manager -e ZK_HOSTS="118.31.6.96:2181" --net=host sheepkiller/kafka-manager
-```
+1. 建立并运行容器, 注意不需要 `-p 9000:9000` 映射端口 
+
+   ```shell
+   docker run -d --name kafka-manager -e ZK_HOSTS="118.31.6.96:2181" --net=host sheepkiller/kafka-manager
+   ```
 
 2. 使用 `netstat -lntp`, 看下有没有 9000端口正在被监听.
 
