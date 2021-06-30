@@ -21,17 +21,6 @@
 
 ---
 
-## docker 安装
-
-> [Docker安装Zookeeper并进行操作](https://www.cnblogs.com/telwanggs/p/10855665.html)
-
-1. `docker pull zookeeper`
-2. 启动容器并添加映射
-
-    `docker run --privileged=true -d --name zookeeper -p 2181:2181 zookeeper:latest`
-
----
-
 ## zookeeper 单机
 
 > 相对于集群部署, 不配置`serve.id`同时不创建`myid`文件, 运行起来即为单机部署.
