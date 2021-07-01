@@ -69,7 +69,7 @@
 
    阿里云服务器有两层防火墙, 一层是linux自带防火墙, 一层是阿里云网页版的安全组策略开放端口号, 可以挑一种使用.
 
-1. 使用`netstat -lntp`命令查看端口号开放状态
+1. 使用`netstat -lntp`命令查看端口号监听状态
 
    ```shell
    [sinjar@sinjar-aliyun-0 ~]$ netstat -lntp
@@ -83,18 +83,12 @@
    tcp6       0      0 :::5355                 :::*                    LISTEN      -      
    ```
 
+
+
+2. 使用 `firewall-cmd --list-services` 查看端口号开放状态
+
    > 发现80和443没有开放
 
-2. 开放端口号
-
-   ```shell
-   iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 端口 -j ACCEPT
-   iptables -I INPUT -m state --state NEW -m udp -p udp --dport 端口 -j ACCEPT
-   
-   # 删除防火墙规则，内容一样把 -I 换成 -D 就行了：
-   iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport 端口 -j ACCEPT
-   iptables -D INPUT -m state --state NEW -m udp -p udp --dport 端口 -j ACCEPT
-   ```
 
 ## 安装基础环境
 

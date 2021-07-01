@@ -1,10 +1,8 @@
 # zookeeper-install
 
-[toc]
-
 > [zookeeper 安装](https://m.w3cschool.cn/zookeeper/zookeeper_installation.html)
 
-## 环境
+## 准备环境
 
 1. jdk
 
