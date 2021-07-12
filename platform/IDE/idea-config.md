@@ -1,5 +1,10 @@
 # IDEA config
 
+## plugin
+
+1. 关闭无用的plugin
+2. 下载相关plugin: maven helper, 
+
 ## 环境配置
 
 ### 配置jdk
@@ -162,11 +167,13 @@
 
    ```java
    /**
-   * <b>Description : </b> 
-   *
-   * @author ${USER}
-   * @date ${DATE} ${TIME}
-   **/
+    * <b>Description : </b> 
+    * <p>
+    * <b>created in </b> ${DATE}
+    * </p>
+    * @author CPF
+    * @since 
+    **/ 
    ```
 
 ### 配置快捷键
