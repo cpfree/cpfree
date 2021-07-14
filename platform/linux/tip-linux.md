@@ -17,3 +17,8 @@
  `ln -s /home/cpf/program/node-x64/bin/npx  /usr/local/bin/`
 
  `sudo apt-get install gcc`
+
+
+---
+
+列表查看文件大小  ls -lht
