@@ -1,5 +1,7 @@
 # maven 必备知识技巧
 
+1. 当我们运行install的时候，Maven实际上是将项目生成的构件安装到了本地仓库，也就是说，只有install了之后，其它项目才能使用此项目生成的构件。
+
 ## maven version
 
 3.6.3
@@ -177,16 +179,12 @@
   </servers>
 
   <!-- mirrors
-   | This is a list of mirrors to be used in downloading artifacts from remote repositories.
+   |这是用于从远程存储库下载工件的镜像列表。
    |
-   | It works like this: a POM may declare a repository to use in resolving certain artifacts.
-   | However, this repository may have problems with heavy traffic at times, so people have mirrored
-   | it to several places.
+   |它是这样工作的：一个 POM 可以声明一个存储库，用于解析某些工件。然而，这个存储库有时可能会遇到流量大的问题，所以人们已经镜像了它到几个地方。
    |
-   | That repository definition will have a unique id, so we can create a mirror reference for that
-   | repository, to be used as an alternate download site. The mirror site will be the preferred
-   | server for that repository.
-   |-->
+   |该存储库定义将具有唯一的 ID，因此我们可以为其创建镜像引用存储库，用作备用下载站点。镜像站点将是首选该存储库的服务器。
+   |--> 
   <mirrors>
   
     <!-- mirrorOf相同的镜像，配置多了没任何作用，只会选取第一个。-->
@@ -226,26 +224,16 @@
   </mirrors>
 
   <!-- profiles
-   | This is a list of profiles which can be activated in a variety of ways, and which can modify
-   | the build process. Profiles provided in the settings.xml are intended to provide local machine-
-   | specific paths and repository locations which allow the build to work in the local environment.
+   | 这是一个配置文件列表，可以通过多种方式激活，并且可以修改构建过程。 settings.xml 中提供的配置文件旨在提供本地机器-允许构建在本地环境中工作的特定路径和存储库位置。
    |
-   | For example, if you have an integration testing plugin - like cactus - that needs to know where
-   | your Tomcat instance is installed, you can provide a variable here such that the variable is
-   | dereferenced during the build process to configure the cactus plugin.
+   |例如，如果你有一个集成测试插件——比如仙人掌——它需要知道在哪里您的 Tomcat 实例已安装，您可以在此处提供一个变量，以便该变量为在构建过程中取消引用以配置仙人掌插件。
    |
-   | As noted above, profiles can be activated in a variety of ways. One way - the activeProfiles
-   | section of this document (settings.xml) - will be discussed later. Another way essentially
-   | relies on the detection of a system property, either matching a particular value for the property,
-   | or merely testing its existence. Profiles can also be activated by JDK version prefix, where a
-   | value of '1.4' might activate a profile when the build is executed on a JDK version of '1.4.2_07'.
-   | Finally, the list of active profiles can be specified directly from the command line.
+   |如上所述，可以通过多种方式激活配置文件。一种方式 -activeProfiles本文档的部分 (settings.xml) -稍后将讨论。另一种方式本质上依赖于系统属性的检测，或者匹配属性的特定值，
+   |或者只是测试它的存在。配置文件也可以通过 JDK 版本前缀激活，其中在“1.4.2_07”的 JDK 版本上执行构建时，“1.4”的值可能会激活配置文件。最后，可以直接从命令行指定活动配置文件列表。
    |
-   | NOTE: For profiles defined in the settings.xml, you are restricted to specifying only artifact
-   |       repositories, plugin repositories, and free-form properties to be used as configuration
-   |       variables for plugins in the POM.
+   |注意：对于 settings.xml 中定义的配置文件，您只能指定工件存储库、插件存储库和用作配置的自由格式属性 POM 中插件的变量。
    |
-   |-->
+   |--> 
   <profiles>
     <profile>
         <id>default</id>

@@ -1,5 +1,25 @@
 # maven 仓库更新失败
 
+## 在pom文件中增加
+
+```xml
+	<repositories>
+	    <repository>
+	        <id>maven-ali</id>
+	        <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>true</enabled>
+	            <updatePolicy>always</updatePolicy>
+	            <checksumPolicy>fail</checksumPolicy>
+	        </snapshots>
+	    </repository>
+	</repositories>
+```
+
+
 ## jar包更新失败
 
 ### 1. 确定maven配置是否正确，
