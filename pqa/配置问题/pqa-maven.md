@@ -11,5 +11,5 @@
     <version>1.0-RELEASE</version>
 ```
 
-其中的 `packaging`, 写成了 `pom` 应该改为jar, 之后刷新下就好了
+其中的 `packaging`, 写成了 `pom` 应该改为jar, 之后刷新下缓存, 再rebuild一下就好了
 
