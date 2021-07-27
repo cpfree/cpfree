@@ -29,19 +29,13 @@ Go 是编译型语言, 是第一门完全支持 UTF-8 的编程语言
 > 第一次开发go的时候, 最好使用命令行的形式和比较轻量的文本编辑器看下go语言文件和相关含义
 > 但是了解go语言结构后, 考虑到 IDE 的代码提示和 代码推荐检查功能, 使用goland作为初始开发工具, 能帮助对代码进行随时优化和检查
 
-   ```bash
-   #!/bin/bash
+## go 命令
 
-   echo "200.31.239.114 9773
-   200.31.239.114 9777
-   200.31.239.114 9778" | \
-   while read host port; do
-   r=$(bash -c 'exec 3<> /dev/tcp/'$host'/'$port';echo $?' 2>/dev/null)
-   if [ "$r" = "0" ]; then
-      echo $host $port is open
-   else
-      echo $host $port is closed
-   fi
-   done
-   ```
+1. go get 加 -u 和不加 -u 参数的区别
 
+   > 加上它可以利用网络来更新已有的代码包及其依赖包。如果已经下载过一个代码包，但是这个代码包又有更新了，那么这时候可以直接用 -u 标记来更新本地的对应的代码包。如果不加这个 -u 标记，执行 go get 一个已有的代码包，会发现命令什么都不执行。只有加了 -u 标记，命令会去执行 git pull 命令拉取最新的代码包的最新版本，下载并安装。
+
+
+## vscode 配置go语言开发环境
+
+<https://blog.csdn.net/mall_lucy/article/details/112920410>
