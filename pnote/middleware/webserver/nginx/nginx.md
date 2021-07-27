@@ -50,3 +50,42 @@ location 配置 | 匹配场景
 `location ~* \.(gif|jpg|jpeg)$ {}` | 匹配任何以gif、jpg或jpeg结尾的请求。然而,所有
 
 
+## 启动, 重启, 关闭
+
+利用配置文件启停
+
+   ```shell
+   # 自定义配置文件启动
+   > nginx -c /usr/local/nginx/conf/nginx.conf
+
+   # 快速停止或关闭
+   > nginx -s stop
+
+   # 正常停止或关闭
+   > nginx -s quit
+
+   # 配置文件修改重装载命令：
+   > nginx -s reload
+   ```
+
+如果有配置服务
+
+   ```shell
+   # 关闭nginx
+   service nginx stop
+   systemctl stop nginx
+
+   # 启动
+   service nginx start
+   systemctl start nginx
+
+   # 重启
+   service nginx restart
+   systemctl restart nginx
+
+   # 随系统自动启动
+   systemctl enable nginx
+
+   # 禁止随系统自动启动
+   systemctl disable nginx
+   ```

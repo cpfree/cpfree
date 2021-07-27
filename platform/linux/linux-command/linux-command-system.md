@@ -4,6 +4,23 @@
 
 `cat /etc/redhat-release`
 
+## 查看CPU信息
+
+```shell
+# 查看cpu信息
+> cat /proc/cpuinfo
+
+# 查看物理cpu个数
+> grep 'physical id' /proc/cpuinfo | sort -u
+
+# 查看核心数量
+> grep 'core id' /proc/cpuinfo | sort -u | wc -l
+
+# 查看线程数
+> grep 'processor' /proc/cpuinfo | sort -u | wc -l
+```
+
+
 ## yum
 
 yum [options] [command] [package ...]
