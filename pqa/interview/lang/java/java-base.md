@@ -1,27 +1,27 @@
 ## 01：Java 基础
 
 1. Java 中的 Math. round(-1. 5) 等于多少？
-等于 -1，因为在数轴上取值时，中间值（0.5）向右取整，所以正 0.5 是往上取整，负 0.5 是直接舍弃。
+   等于 -1，因为在数轴上取值时，中间值（0.5）向右取整，所以正 0.5 是往上取整，负 0.5 是直接舍弃。
 9. 如何将字符串反转？
-使用 StringBuilder 或者 stringBuffer 的 reverse() 方法。
+   使用 StringBuilder 或者 stringBuffer 的 reverse() 方法。
 15. Java 中 IO 流分为几种？
-按功能来分：输入流（input）、输出流（output）。
-按类型来分：字节流和字符流。
-字节流和字符流的区别是：字节流按 8 位传输以字节为单位输入输出数据，字符流按 16 位传输以字符为单位输入输出数据。
+   按功能来分：输入流（input）、输出流（output）。
+   按类型来分：字节流和字符流。
+   字节流和字符流的区别是：字节流按 8 位传输以字节为单位输入输出数据，字符流按 16 位传输以字符为单位输入输出数据。
 16. BIO、NIO、AIO 有什么区别？
-BIO：Block IO 同步阻塞式 IO，就是我们平常使用的传统 IO，它的特点是模式简单使用方便，并发处理能力低。
-NIO：Non IO 同步非阻塞 IO，是传统 IO 的升级，客户端和服务器端通过 Channel（通道）通讯，实现了多路复用。
-AIO：Asynchronous IO 是 NIO 的升级，也叫 NIO2，实现了异步非堵塞 IO ，异步 IO 的操作基于事件和回调机制。
+   BIO：Block IO 同步阻塞式 IO，就是我们平常使用的传统 IO，它的特点是模式简单使用方便，并发处理能力低。
+   NIO：Non IO 同步非阻塞 IO，是传统 IO 的升级，客户端和服务器端通过 Channel（通道）通讯，实现了多路复用。
+   AIO：Asynchronous IO 是 NIO 的升级，也叫 NIO2，实现了异步非堵塞 IO ，异步 IO 的操作基于事件和回调机制。
 17. Files的常用方法都有哪些？
-Files. exists()：检测文件路径是否存在。
-Files. createFile()：创建文件。
-Files. createDirectory()：创建文件夹。
-Files. delete()：删除一个文件或目录。
-Files. copy()：复制文件。
-Files. move()：移动文件。
-Files. size()：查看文件个数。
-Files. read()：读取文件。
-Files. write()：写入文件。
+   Files. exists()：检测文件路径是否存在。
+   Files. createFile()：创建文件。
+   Files. createDirectory()：创建文件夹。
+   Files. delete()：删除一个文件或目录。
+   Files. copy()：复制文件。
+   Files. move()：移动文件。
+   Files. size()：查看文件个数。
+   Files. read()：读取文件。
+   Files. write()：写入文件。
 
 
 
@@ -34,58 +34,58 @@
 
 
 
-02： 容器
-容器
+   02： 容器
+   容器
 18. Java 容器都有哪些？
-Java 容器分为 Collection 和 Map 两大类，其下又有很多子类，如下所示：
-Collection
-List
-ArrayList
-LinkedList
-Vector
-Stack
-Set
-HashSet
-LinkedHashSet
-TreeSet
-Map
-HashMap
-LinkedHashMap
-TreeMap
-ConcurrentHashMap
-Hashtable
+   Java 容器分为 Collection 和 Map 两大类，其下又有很多子类，如下所示：
+   Collection
+   List
+   ArrayList
+   LinkedList
+   Vector
+   Stack
+   Set
+   HashSet
+   LinkedHashSet
+   TreeSet
+   Map
+   HashMap
+   LinkedHashMap
+   TreeMap
+   ConcurrentHashMap
+   Hashtable
 29. 在 Queue 中 poll()和 remove()有什么区别？
-相同点：都是返回第一个元素，并在队列中删除返回的对象。
-不同点：如果没有元素 poll()会返回 null，而 remove()会直接抛出 NoSuchElementException 异常。
-代码示例：
-Queue<String> queue = new LinkedList<String>();
-queue. offer("string"); // add
-System. out. println(queue. poll());
-System. out. println(queue. remove());
-System. out. println(queue. size());
+   相同点：都是返回第一个元素，并在队列中删除返回的对象。
+   不同点：如果没有元素 poll()会返回 null，而 remove()会直接抛出 NoSuchElementException 异常。
+   代码示例：
+   Queue<String> queue = new LinkedList<String>();
+   queue. offer("string"); // add
+   System. out. println(queue. poll());
+   System. out. println(queue. remove());
+   System. out. println(queue. size());
 30. 哪些集合类是线程安全的？
-Vector、Hashtable、Stack 都是线程安全的，而像 HashMap 则是非线程安全的，不过在 JDK 1.5 之后随着 Java. util. concurrent 并发包的出现，它们也有了自己对应的线程安全类，比如 HashMap 对应的线程安全类就是 ConcurrentHashMap。
+   Vector、Hashtable、Stack 都是线程安全的，而像 HashMap 则是非线程安全的，不过在 JDK 1.5 之后随着 Java. util. concurrent 并发包的出现，它们也有了自己对应的线程安全类，比如 HashMap 对应的线程安全类就是 ConcurrentHashMap。
 32. Iterator 怎么使用？有什么特点？
-Iterator 使用代码如下：
-List<String> list = new ArrayList<>();
-Iterator<String> it = list. iterator();
-while(it. hasNext()){
-  String obj = it. next();
-  System. out. println(obj);
-}
-Iterator 的特点是更加安全，因为它可以确保，在当前遍历的集合元素被更改的时候，就会抛出 ConcurrentModificationException 异常。
+   Iterator 使用代码如下：
+   List<String> list = new ArrayList<>();
+   Iterator<String> it = list. iterator();
+   while(it. hasNext()){
+   String obj = it. next();
+   System. out. println(obj);
+   }
+   Iterator 的特点是更加安全，因为它可以确保，在当前遍历的集合元素被更改的时候，就会抛出 ConcurrentModificationException 异常。
 33. Iterator 和 ListIterator 有什么区别？
-Iterator 可以遍历 Set 和 List 集合，而 ListIterator 只能遍历 List。
-Iterator 只能单向遍历，而 ListIterator 可以双向遍历（向前/后遍历）。
-ListIterator 从 Iterator 接口继承，然后添加了一些额外的功能，比如添加一个元素、替换一个元素、获取前面或后面元素的索引位置。
+   Iterator 可以遍历 Set 和 List 集合，而 ListIterator 只能遍历 List。
+   Iterator 只能单向遍历，而 ListIterator 可以双向遍历（向前/后遍历）。
+   ListIterator 从 Iterator 接口继承，然后添加了一些额外的功能，比如添加一个元素、替换一个元素、获取前面或后面元素的索引位置。
 34. 怎么确保一个集合不能被修改？
-可以使用 Collections. unmodifiableCollection(Collection c) 方法来创建一个只读集合，这样改变集合的任何操作都会抛出 Java. lang. UnsupportedOperationException 异常。
-示例代码如下：
-List<String> list = new ArrayList<>();
-list. add("x");
-Collection<String> clist = Collections. unmodifiableCollection(list);
-clist. add("y"); // 运行时此行报错
-System. out. println(list. size());
+   可以使用 Collections. unmodifiableCollection(Collection c) 方法来创建一个只读集合，这样改变集合的任何操作都会抛出 Java. lang. UnsupportedOperationException 异常。
+   示例代码如下：
+   List<String> list = new ArrayList<>();
+   list. add("x");
+   Collection<String> clist = Collections. unmodifiableCollection(list);
+   clist. add("y"); // 运行时此行报错
+   System. out. println(list. size());
 
 
 
@@ -100,78 +100,78 @@ System. out. println(list. size());
 03：多线程
 多线程
 35. 并行和并发有什么区别？
-并行：多个处理器或多核处理器同时处理多个任务。
-并发：多个任务在同一个 CPU 核上，按细分的时间片轮流(交替)执行，从逻辑上来看那些任务是同时执行。
-如下图：
+   并行：多个处理器或多核处理器同时处理多个任务。
+   并发：多个任务在同一个 CPU 核上，按细分的时间片轮流(交替)执行，从逻辑上来看那些任务是同时执行。
+   如下图：
 
-并发 = 两个队列和一台咖啡机。
-并行 = 两个队列和两台咖啡机。
+   并发 = 两个队列和一台咖啡机。
+   并行 = 两个队列和两台咖啡机。
 44. 创建线程池有哪几种方式？
-线程池创建有七种方式，最核心的是最后一种：
-newSingleThreadExecutor()：它的特点在于工作线程数目被限制为 1，操作一个无界的工作队列，所以它保证了所有任务的都是被顺序执行，最多会有一个任务处于活动状态，并且不允许使用者改动线程池实例，因此可以避免其改变线程数目；
-newCachedThreadPool()：它是一种用来处理大量短时间工作任务的线程池，具有几个鲜明特点：它会试图缓存线程并重用，当无缓存线程可用时，就会创建新的工作线程；如果线程闲置的时间超过 60 秒，则被终止并移出缓存；长时间闲置时，这种线程池，不会消耗什么资源。其内部使用 SynchronousQueue 作为工作队列；
-newFixedThreadPool(int nThreads)：重用指定数目（nThreads）的线程，其背后使用的是无界的工作队列，任何时候最多有 nThreads 个工作线程是活动的。这意味着，如果任务数量超过了活动队列数目，将在工作队列中等待空闲线程出现；如果有工作线程退出，将会有新的工作线程被创建，以补足指定的数目 nThreads；
-newSingleThreadScheduledExecutor()：创建单线程池，返回 ScheduledExecutorService，可以进行定时或周期性的工作调度；
-newScheduledThreadPool(int corePoolSize)：和newSingleThreadScheduledExecutor()类似，创建的是个 ScheduledExecutorService，可以进行定时或周期性的工作调度，区别在于单一工作线程还是多个工作线程；
-newWorkStealingPool(int parallelism)：这是一个经常被人忽略的线程池，Java 8 才加入这个创建方法，其内部会构建ForkJoinPool，利用Work-Stealing算法，并行地处理任务，不保证处理顺序；
-ThreadPoolExecutor()：是最原始的线程池创建，上面1-3创建方式都是对ThreadPoolExecutor的封装。
+   线程池创建有七种方式，最核心的是最后一种：
+   newSingleThreadExecutor()：它的特点在于工作线程数目被限制为 1，操作一个无界的工作队列，所以它保证了所有任务的都是被顺序执行，最多会有一个任务处于活动状态，并且不允许使用者改动线程池实例，因此可以避免其改变线程数目；
+   newCachedThreadPool()：它是一种用来处理大量短时间工作任务的线程池，具有几个鲜明特点：它会试图缓存线程并重用，当无缓存线程可用时，就会创建新的工作线程；如果线程闲置的时间超过 60 秒，则被终止并移出缓存；长时间闲置时，这种线程池，不会消耗什么资源。其内部使用 SynchronousQueue 作为工作队列；
+   newFixedThreadPool(int nThreads)：重用指定数目（nThreads）的线程，其背后使用的是无界的工作队列，任何时候最多有 nThreads 个工作线程是活动的。这意味着，如果任务数量超过了活动队列数目，将在工作队列中等待空闲线程出现；如果有工作线程退出，将会有新的工作线程被创建，以补足指定的数目 nThreads；
+   newSingleThreadScheduledExecutor()：创建单线程池，返回 ScheduledExecutorService，可以进行定时或周期性的工作调度；
+   newScheduledThreadPool(int corePoolSize)：和newSingleThreadScheduledExecutor()类似，创建的是个 ScheduledExecutorService，可以进行定时或周期性的工作调度，区别在于单一工作线程还是多个工作线程；
+   newWorkStealingPool(int parallelism)：这是一个经常被人忽略的线程池，Java 8 才加入这个创建方法，其内部会构建ForkJoinPool，利用Work-Stealing算法，并行地处理任务，不保证处理顺序；
+   ThreadPoolExecutor()：是最原始的线程池创建，上面1-3创建方式都是对ThreadPoolExecutor的封装。
 45. 线程池都有哪些状态？
-RUNNING：这是最正常的状态，接受新的任务，处理等待队列中的任务。
-SHUTDOWN：不接受新的任务提交，但是会继续处理等待队列中的任务。
-STOP：不接受新的任务提交，不再处理等待队列中的任务，中断正在执行任务的线程。
-TIDYING：所有的任务都销毁了，workCount 为 0，线程池的状态在转换为 TIDYING 状态时，会执行钩子方法 terminated()。
-TERMINATED：terminated()方法结束后，线程池的状态就会变成这个。
+   RUNNING：这是最正常的状态，接受新的任务，处理等待队列中的任务。
+   SHUTDOWN：不接受新的任务提交，但是会继续处理等待队列中的任务。
+   STOP：不接受新的任务提交，不再处理等待队列中的任务，中断正在执行任务的线程。
+   TIDYING：所有的任务都销毁了，workCount 为 0，线程池的状态在转换为 TIDYING 状态时，会执行钩子方法 terminated()。
+   TERMINATED：terminated()方法结束后，线程池的状态就会变成这个。
 46. 线程池中 submit() 和 execute() 方法有什么区别？
-execute()：只能执行 Runnable 类型的任务。
-submit()：可以执行 Runnable 和 Callable 类型的任务。
-Callable 类型的任务可以获取执行的返回值，而 Runnable 执行无返回值。
+   execute()：只能执行 Runnable 类型的任务。
+   submit()：可以执行 Runnable 和 Callable 类型的任务。
+   Callable 类型的任务可以获取执行的返回值，而 Runnable 执行无返回值。
 47. 在 Java 程序中怎么保证多线程的运行安全？
-方法一：使用安全类，比如 Java. util. concurrent 下的类。
-方法二：使用自动锁 synchronized。
-方法三：使用手动锁 Lock。
-手动锁 Java 示例代码如下：
-Lock lock = new ReentrantLock();
-lock. lock();
-try {
-    System. out. println("获得锁");
-} catch (Exception e) {
-    // TODO: handle exception
-} finally {
-    System. out. println("释放锁");
-    lock. unlock();
-}
+   方法一：使用安全类，比如 Java. util. concurrent 下的类。
+   方法二：使用自动锁 synchronized。
+   方法三：使用手动锁 Lock。
+   手动锁 Java 示例代码如下：
+   Lock lock = new ReentrantLock();
+   lock. lock();
+   try {
+      System. out. println("获得锁");
+   } catch (Exception e) {
+      // TODO: handle exception
+   } finally {
+      System. out. println("释放锁");
+      lock. unlock();
+   }
 48. 多线程中 synchronized 锁升级的原理是什么？
-synchronized 锁升级原理：在锁对象的对象头里面有一个 threadid 字段，在第一次访问的时候 threadid 为空，jvm 让其持有偏向锁，并将 threadid 设置为其线程 id，再次进入的时候会先判断 threadid 是否与其线程 id 一致，如果一致则可以直接使用此对象，如果不一致，则升级偏向锁为轻量级锁，通过自旋循环一定次数来获取锁，执行一定次数之后，如果还没有正常获取到要使用的对象，此时就会把锁从轻量级升级为重量级锁，此过程就构成了 synchronized 锁的升级。
-锁的升级的目的：锁升级是为了减低了锁带来的性能消耗。在 Java 6 之后优化 synchronized 的实现方式，使用了偏向锁升级为轻量级锁再升级到重量级锁的方式，从而减低了锁带来的性能消耗。
+   synchronized 锁升级原理：在锁对象的对象头里面有一个 threadid 字段，在第一次访问的时候 threadid 为空，jvm 让其持有偏向锁，并将 threadid 设置为其线程 id，再次进入的时候会先判断 threadid 是否与其线程 id 一致，如果一致则可以直接使用此对象，如果不一致，则升级偏向锁为轻量级锁，通过自旋循环一定次数来获取锁，执行一定次数之后，如果还没有正常获取到要使用的对象，此时就会把锁从轻量级升级为重量级锁，此过程就构成了 synchronized 锁的升级。
+   锁的升级的目的：锁升级是为了减低了锁带来的性能消耗。在 Java 6 之后优化 synchronized 的实现方式，使用了偏向锁升级为轻量级锁再升级到重量级锁的方式，从而减低了锁带来的性能消耗。
 49. 什么是死锁？
-当线程 A 持有独占锁a，并尝试去获取独占锁 b 的同时，线程 B 持有独占锁 b，并尝试获取独占锁 a 的情况下，就会发生 AB 两个线程由于互相持有对方需要的锁，而发生的阻塞现象，我们称为死锁。
+   当线程 A 持有独占锁a，并尝试去获取独占锁 b 的同时，线程 B 持有独占锁 b，并尝试获取独占锁 a 的情况下，就会发生 AB 两个线程由于互相持有对方需要的锁，而发生的阻塞现象，我们称为死锁。
 50. 怎么防止死锁？
-尽量使用 tryLock(long timeout, TimeUnit unit)的方法(ReentrantLock、ReentrantReadWriteLock)，设置超时时间，超时可以退出防止死锁。
-尽量使用 Java. util. concurrent 并发类代替自己手写锁。
-尽量降低锁的使用粒度，尽量不要几个功能用同一把锁。
-尽量减少同步的代码块。
+   尽量使用 tryLock(long timeout, TimeUnit unit)的方法(ReentrantLock、ReentrantReadWriteLock)，设置超时时间，超时可以退出防止死锁。
+   尽量使用 Java. util. concurrent 并发类代替自己手写锁。
+   尽量降低锁的使用粒度，尽量不要几个功能用同一把锁。
+   尽量减少同步的代码块。
 51. ThreadLocal 是什么？有哪些使用场景？
-ThreadLocal 为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。
-ThreadLocal 的经典使用场景是数据库连接和 session 管理等。
+   ThreadLocal 为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。
+   ThreadLocal 的经典使用场景是数据库连接和 session 管理等。
 52. 说一下 synchronized 底层实现原理？
-synchronized 是由一对 monitorenter/monitorexit 指令实现的，monitor 对象是同步的基本实现单元。在 Java 6 之前，monitor 的实现完全是依靠操作系统内部的互斥锁，因为需要进行用户态到内核态的切换，所以同步操作是一个无差别的重量级操作，性能也很低。但在 Java 6 的时候，Java 虚拟机 对此进行了大刀阔斧地改进，提供了三种不同的 monitor 实现，也就是常说的三种不同的锁：偏向锁（Biased Locking）、轻量级锁和重量级锁，大大改进了其性能。
+   synchronized 是由一对 monitorenter/monitorexit 指令实现的，monitor 对象是同步的基本实现单元。在 Java 6 之前，monitor 的实现完全是依靠操作系统内部的互斥锁，因为需要进行用户态到内核态的切换，所以同步操作是一个无差别的重量级操作，性能也很低。但在 Java 6 的时候，Java 虚拟机 对此进行了大刀阔斧地改进，提供了三种不同的 monitor 实现，也就是常说的三种不同的锁：偏向锁（Biased Locking）、轻量级锁和重量级锁，大大改进了其性能。
 53. synchronized 和 volatile 的区别是什么？
-volatile 是变量修饰符；synchronized 是修饰类、方法、代码段。
-volatile 仅能实现变量的修改可见性，不能保证原子性；而 synchronized 则可以保证变量的修改可见性和原子性。
-volatile 不会造成线程的阻塞；synchronized 可能会造成线程的阻塞。
+   volatile 是变量修饰符；synchronized 是修饰类、方法、代码段。
+   volatile 仅能实现变量的修改可见性，不能保证原子性；而 synchronized 则可以保证变量的修改可见性和原子性。
+   volatile 不会造成线程的阻塞；synchronized 可能会造成线程的阻塞。
 54. synchronized 和 Lock 有什么区别？
-synchronized 可以给类、方法、代码块加锁；而 lock 只能给代码块加锁。
-synchronized 不需要手动获取锁和释放锁，使用简单，发生异常会自动释放锁，不会造成死锁；而 lock 需要自己加锁和释放锁，如果使用不当没有 unLock()去释放锁就会造成死锁。
-通过 Lock 可以知道有没有成功获取锁，而 synchronized 却无法办到。
+   synchronized 可以给类、方法、代码块加锁；而 lock 只能给代码块加锁。
+   synchronized 不需要手动获取锁和释放锁，使用简单，发生异常会自动释放锁，不会造成死锁；而 lock 需要自己加锁和释放锁，如果使用不当没有 unLock()去释放锁就会造成死锁。
+   通过 Lock 可以知道有没有成功获取锁，而 synchronized 却无法办到。
 55. synchronized 和 ReentrantLock 区别是什么？
-synchronized 早期的实现比较低效，对比 ReentrantLock，大多数场景性能都相差较大，但是在 Java 6 中对 synchronized 进行了非常多的改进。
-主要区别如下：
-ReentrantLock 使用起来比较灵活，但是必须有释放锁的配合动作；
-ReentrantLock 必须手动获取与释放锁，而 synchronized 不需要手动释放和开启锁；
-ReentrantLock 只适用于代码块锁，而 synchronized 可用于修饰方法、代码块等。
-volatile 标记的变量不会被编译器优化；synchronized 标记的变量可以被编译器优化。
+   synchronized 早期的实现比较低效，对比 ReentrantLock，大多数场景性能都相差较大，但是在 Java 6 中对 synchronized 进行了非常多的改进。
+   主要区别如下：
+   ReentrantLock 使用起来比较灵活，但是必须有释放锁的配合动作；
+   ReentrantLock 必须手动获取与释放锁，而 synchronized 不需要手动释放和开启锁；
+   ReentrantLock 只适用于代码块锁，而 synchronized 可用于修饰方法、代码块等。
+   volatile 标记的变量不会被编译器优化；synchronized 标记的变量可以被编译器优化。
 56. 说一下 atomic 的原理？
-atomic 主要利用 CAS (Compare And Wwap) 和 volatile 和 native 方法来保证原子操作，从而避免 synchronized 的高开销，执行效率大为提升。
+   atomic 主要利用 CAS (Compare And Wwap) 和 volatile 和 native 方法来保证原子操作，从而避免 synchronized 的高开销，执行效率大为提升。
 
 
 
