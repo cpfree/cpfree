@@ -1,0 +1,1 @@
+“All problems in computer science can be solved by another level of indirection（计算机科学领域的任何问题都可以通过增加一个间接的中间层来解决）”。
