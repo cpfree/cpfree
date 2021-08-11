@@ -14,6 +14,15 @@
     <Product ID="O365HomePremRetail">
       <Language ID="zh-cn" />
       <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Publisher" />
+    </Product>
+  </Add>
+
+<!-- 
+  <Add OfficeClientEdition="64" Channel="Monthly">
+    <Product ID="O365HomePremRetail">
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="Access" />
       <ExcludeApp ID="OneNote" />
       <ExcludeApp ID="Outlook" />
       <ExcludeApp ID="Publisher" />
@@ -21,7 +30,7 @@
     <Product ID="VisioProRetail">
       <Language ID="zh-cn" />
     </Product>
-  </Add>
+  </Add> -->
 
   <!--  <Updates Enabled="TRUE" Channel="Monthly" /> -->
 
