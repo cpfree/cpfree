@@ -10,15 +10,6 @@
 1. 了解Mysql为什么使用B+树
 2. 了解Mysql的两大存储引擎Myisam, innodb.
 
-## 删除log日志方法
-
-标准的做法应该是在MySQL下命令清理：
-
-/usr/local/mysql/bin/mysql -u root -p
-reset master;
-
-远程root 也可以 删除log日志
-
 ## MYSQL 重命名表
 
 RENAME TABLE old_table_name TO new_table_name;
@@ -50,47 +41,3 @@ RENAME TABLE old_table_name TO new_table_name;
 4. 只复制表的数据
 
 　　insert into 目标表 select * from 源表;
-
-## MySQL会话级别禁止产生binlog的参数
-
-sql_log_bin
-
-SET sql_log_bin = {0|1}
-
-官网地址
-https://dev.mysql.com/doc/refman/8.0/en/set-sql-log-bin.html
-
-## 关闭mysql日志
-
-1. 登录 mysql, 打入命令 RESET MASTER（把之前生成的bin-log日志文件全部重置，释放控件）。
-
-2. 进入mysql的配置文件 cd /etc/my.cnf  注释掉2行：
-
-   ```conf
-   #log-bin=mysql-bin
-   #binlog_format=mixed
-   ```
-
-3. 重启mysql   ， service mysql restart就OK了
-
-## 查看 Mysql 日志
-
-1. SQL查询: 查看 Mysql 二进制日志是否开启, 看`log_bin`是否为 `ON`
-
-   `show variables like '%log_bin%'`
-
-2. SQL查询: 查看 MYSQL 二进制日志文件位置
-
-   `show BINARY LOGS`
-
-3. linux: 找到日志文件位置以及日志处理工具位置.
-
-   查找二进制日志处理工具
-   `find / -name mysqlbinlog`
-
-4. 使用`mysqlbinlog` 转换二进制文件至文本文件.
-
-   如果找到的日志文件位置 `/var/lib/mysql/log.000015`,  `mysqlbinlog` 在 `/usr/local/mysqlbinlog`, 则linux命令
-
-   `> /usr/local/mysqlbinlog /var/lib/mysql/log.000015 -v --result-file=./log.txt`
-   > 查看二进制文件还有其他的语句, 并不一定需要转换成文本文件.

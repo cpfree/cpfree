@@ -23,7 +23,30 @@ Go 是编译型语言, 是第一门完全支持 UTF-8 的编程语言
 
 ## vscode 配置go语言开发环境
 
-<https://blog.csdn.net/mall_lucy/article/details/112920410>
+参考自: <https://blog.csdn.net/mall_lucy/article/details/112920410>
+
+1. 下载go 安装包, 并解压.
+2. 将解压的go安装包的bin目录加到环境变量path中, 命令行查看版本是否正常显示.
+   
+   ```shell
+   # 查询当前版本
+   > go version
+   go version go1.16.6 windows/amd64
+   ```
+
+3. 在用户环境变量下新建两个环境变量
+
+   1. GO111MODULE: on
+   2. GOPROXY: https://goproxy.io,direct
+
+   ![配置环境变量](2021-08-17-09-56-58.png)
+
+4. 打开vscode, 安装`go`插件
+   
+5. 新建一个go工程文件, vscode会自动弹出安装go插件的提示, 选择全部安装
+
+## go 命令行命令
+
 
 ## 遍历汇总
 
