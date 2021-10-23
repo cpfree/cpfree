@@ -81,11 +81,11 @@ parent  // 一个git目录
 |-- child2
 ```
 
-1. 进入 parent 目录, 并将 child1 变成一个 parent 下的一个分支.
+1. 进入 parent 目录, 并将 child1 变成一个 parent 下的一个分支 child1-branch.
 
    ```shell
    cd parent
-   git subtree split -P child1 -b child1
+   git subtree split -P child1 -b child1-branch
    ```
 
 2. 新建立一个 git 新库
@@ -100,7 +100,7 @@ parent  // 一个git目录
 3. 拉取 parent 目录分支
 
    ```shell
-   git pull ../parent child1
+   git pull ../parent child1-branch
    ```
 
 4. 在远程创建一个空 git 仓库, 并提交至 git 远程仓库
