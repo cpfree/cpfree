@@ -243,3 +243,10 @@ markdown-section code, .markdown-section pre {
 img, pre {
     border-radius: 8px;
 }
+
+/* 更改2K屏下的渲染问题 */
+.markdown-section p,
+.markdown-section ul,
+.markdown-section ol {
+  line-height: unset;
+}
