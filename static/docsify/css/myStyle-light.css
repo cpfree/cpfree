@@ -14,7 +14,7 @@ a {
     text-align: center;
 }
 .badge.green[data-v-73ca276e], .badge.tip[data-v-73ca276e], .badge[data-v-73ca276e] {
-    background-color: #42b983;
+    background-color: var(--theme-color);
 }
 .badge.warn[data-v-73ca276e], .badge.warning[data-v-73ca276e], .badge.yellow[data-v-73ca276e] {
     background-color: #e7c000;
@@ -46,7 +46,7 @@ body{
     margin-right: 10px;
     color: #fff;
     border-radius: 10px;
-    background-color: rgb(102, 126, 233);
+    background-color: var(--theme-color);
 }
 /* 首页a标签置顶,不然无法点击 */
 section.cover .cover-main {
@@ -100,7 +100,7 @@ section.cover .cover-main {
     font-size:14px !important;
 }
 .sidebar ul li.active > a {
-    color: rgb(66, 185, 163);
+    color: var(--title-color);
 } 
 
 /* 侧边栏标题 */
@@ -122,7 +122,7 @@ h1
 }
 h1 span{
     display:inline-block;
-    background: rgb(102, 126, 233);
+    background: var(--theme-color);
     color:#ffffff !important;
     padding:  10px  16px;
     border-radius:5px;
@@ -157,7 +157,7 @@ section.cover.has-mask .mask {
 }
 /* a 标签 */
 .markdown-section a {
-    color: rgb(66, 185, 163);
+    color: var(--title-color);
     font-weight: 500;
 }
 /* 表格 */
