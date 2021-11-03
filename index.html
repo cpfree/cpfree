@@ -1,132 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>CPFree Document</title>
+   <meta charset="UTF-8">
+   <title>逆光影者的IT博客</title>
 
-  <!-- 解除其他平台的防盗链 -->
-  <meta name="referrer" content="never">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description...">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <!-- 引入 css -->
-  <link rel="stylesheet" href="static/docsify/css/vue.css">
-  
-  <link rel="stylesheet" type="text/css" href="static/css/my-style.css"/>
-  
-  <!-- alert -->
-  <link rel="stylesheet" href="static/docsify/css/sweetalert.min.css" type='text/css' media='all' />
-  <!-- latex -->
-  <link rel="stylesheet" href="static/docsify/css/katex.min.css" />
+   <!-- 解除其他平台的防盗链 -->
+   <meta name="referrer" content="never">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <meta name="description" content="Description...">
+   <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <!-- 引入 css -->
 
-  <!--网页标题左侧显示-->
-  <link rel="icon" href="https://gitee.com/veal98/images/raw/master/img/20210212163801.png" type="image/x-icon">
-  <link href="static/docsify/css/font-awesome.min.css" rel="stylesheet">
-  <!--收藏夹显示图标-->
-  <link rel="shortcut icon" href="https://gitee.com/veal98/images/raw/master/img/20210212163801.png" type="image/x-icon">
-</head>
-<body background="" style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;">
-  <div id="app">加载中...</div>
-  <a class="to-top">Top</a>
-  <script>
-    window.$docsify = {
-      el: '#app',
-      name: 'CPFree note',
-      nameLink: 'http://cpfree.cn/',
-      repo: 'https://github.com/sinjar-chen',
-      logo: '',
-      themeColor: 'rgb(102, 126, 233)',
-      loadNavbar: true,
-      auto2top:true,
-      coverpage: true,
-      onlyCover: true,
-      topMargin: 140,
-      // 加载 _sidebar.md
-      loadSidebar: true,
-      subMaxLevel: 3,
+   <!-- <link rel="stylesheet" type="text/css" href="static/css/theme-simple.css"> -->
+   <link rel="stylesheet" type="text/css" href="static/docsify/css/vue.css">
+   <link rel="stylesheet" type="text/css" href="static/css/my-style.css" />
 
-      //增加搜索框
-      search: {
-        paths: 'auto',
-        placeholder: '🔍 搜索',
-        noData: '😒 找不到结果',
-        // Headline depth, 1 - 6
-        depth: 6,
-        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-      },
-   
-      footer: {
-        copy: '我是有',
-        auth: ' <strong>底线</strong>的啊',
-        pre: '<hr/>',
-        style: 'text-align: center;',
-      },
-      copyCode: {
-          buttonText: '复制到剪贴板',
-          errorText: '复制错误',
-          successText: '已复制!'
-      },
+   <!-- alert -->
+   <!-- <link rel="stylesheet" type="text/css" href="static/docsify/css/sweetalert.min.css" type='text/css' media='all' /> -->
+   <!-- latex -->
+   <!-- <link rel="stylesheet" type="text/css" href="static/docsify/css/katex.min.css" /> -->
 
-      'flexible-alerts': {
-        style: 'flat'
-      },
-      remoteMarkdown: {
-        tag: 'remoteMarkdownUrl',
+   <link href="static/docsify/css/font-awesome.min.css" rel="stylesheet">
+   <!--网页标题左侧显示-->
+   <link rel="icon" href="static/img/logo.png" type="image/x-icon">
+   <!--收藏夹显示图标-->
+   <link rel="shortcut icon" href="static/img/logo.png" type="image/x-icon">
+
+   <style>
+      :root {
+         --bg-bg: url(/static/img/cover.jpg) center center / cover;
       }
 
-    }
-  </script>
+      .sidebar-toggle .sidebar-toggle-button {
+         top: 69px;
+      }
 
-  <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
-  <!-- 引入 script -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+      section.cover .mask {
+         background: var(--bg-bg);
+         opacity: 0.8;
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         /* top: 30px;
+         left: 30px;
+         height: calc(100% - 60px);
+         width: calc(100% - 60px);
+         border-radius: 10px; */
+      }
+   </style>
 
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <script src="//cdn.jsdelivr.net/docsify/lib/plugins/zoom-image.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
-  
-  <!-- docsify内置的代码高亮工具是 Prism。添加额外的语法支持需要通过CDN添加相应的语法文件 -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+</head>
 
-  <!-- CDN files for docsify-katex -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-  
-  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
-  
-  <!-- PWA 离线化 -->
-  <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('/static/js/pwa.js')
-    }
-  </script>
-  
-  <!-- 访问量统计 -->
-  <!-- 我的阿里云服务器 G-JW67PQZXGS -->
-  <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<body>
+   <div id="app">加载中...</div>
+   <a class="to-top">Top</a>
+   <script>
+      window.$docsify = {
+         el: '#app',
+         name: 'CPFree note',
+         nameLink: 'http://cpfree.cn/',
+         repo: 'https://github.com/sinjar-chen',
+         logo: '',
+         themeColor: 'rgb(102, 126, 233)',
+         loadNavbar: true, // 设置侧边栏
+         auto2top: true,
+         coverpage: true, // 设置封面
+         onlyCover: true, // 只显示封面
+         topMargin: 140,
+         // 加载 _sidebar.md
+         loadSidebar: true, // 设置侧边栏
+         subMaxLevel: 3, // 侧边栏显示当前页面的目录(标题)
+         externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
+
+         //增加搜索框
+         search: {
+            paths: 'auto',
+            placeholder: '🔍 搜索',
+            noData: '😒 找不到结果',
+            // Headline depth, 1 - 6
+            depth: 6,
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+         },
+
+         footer: {
+            copy: '我是有',
+            auth: ' <strong>底线</strong>的啊',
+            pre: '<hr/>',
+            style: 'text-align: center;',
+         },
+         copyCode: {
+            buttonText: '复制到剪贴板',
+            errorText: '复制错误',
+            successText: '已复制!'
+         },
+
+         'flexible-alerts': {
+            style: 'flat'
+         },
+         remoteMarkdown: {
+            tag: 'remoteMarkdownUrl',
+         }
+
+      }
+   </script>
+
+   <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
+   <!-- 引入 script -->
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+   <!-- emoji -->
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+   <!-- 图片缩小方法-->
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+   <!-- 添加一键拷贝代码-->
+   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+   <!-- 引入搜索模块 -->
+   <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+
+   <!-- docsify内置的代码高亮工具是 Prism。添加额外的语法支持需要通过CDN添加相应的语法文件 -->
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+
+   <!-- CDN files for docsify-katex -->
+   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+   <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+
+   <!-- PWA 离线化 -->
+   <script>
+      if (typeof navigator.serviceWorker !== 'undefined') {
+         navigator.serviceWorker.register('/static/js/pwa.js')
+      }
+   </script>
+
+   <!-- 访问量统计 -->
+   <!-- 我的阿里云服务器 G-JW67PQZXGS -->
+   <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js" data-ga="G-JW67PQZXGS"></script> -->
 
-  <!-- 置顶插件 -->
-  <script src="static/js/jquery-1.11.3.min.js"></script>
-  <script src="static/js/jquery.toTop.min.js"></script>
-  <script>
-    $('.to-top').toTop();
-  </script>
+   <!-- 置顶插件 -->
+   <script src="static/js/jquery-1.11.3.min.js"></script>
+   <script src="static/js/jquery.toTop.min.js"></script>
+   <script>
+      $('.to-top').toTop();
 
-  <!-- Markdown 引用样式美化 -->
-  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+      function changeCoverBg() {
+         var r = document.querySelector(':root');
+         var random = Math.ceil(Math.random() * 6);
+         r.style.setProperty('--bg-bg', 'url(/static/img/cover-' + random + '.jpg) center center / cover');
+      }
+
+      changeCoverBg();
+   </script>
+
+   <!-- Markdown 引用样式美化 -->
+   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
 
 </body>
+
 </html>
