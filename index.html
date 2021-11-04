@@ -27,10 +27,11 @@
    <link rel="icon" href="static/img/logo.png" type="image/x-icon">
    <!--收藏夹显示图标-->
    <link rel="shortcut icon" href="static/img/logo.png" type="image/x-icon">
-
+   <!-- gitalk 评论系统 -->
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
    <style>
       :root {
-         --bg-bg: url(/static/img/cover.jpg) center center / cover;
+         --bg-bg: unset;
       }
 
       .sidebar-toggle .sidebar-toggle-button {
@@ -117,6 +118,9 @@
    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
    <!-- 引入搜索模块 -->
    <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+   <!-- 引入 gitalk 评论系统 -->
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 
    <!-- docsify内置的代码高亮工具是 Prism。添加额外的语法支持需要通过CDN添加相应的语法文件 -->
    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
@@ -136,6 +140,7 @@
 
    <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
 
+
    <!-- PWA 离线化 -->
    <script>
       if (typeof navigator.serviceWorker !== 'undefined') {
@@ -154,13 +159,26 @@
    <script>
       $('.to-top').toTop();
 
-      function changeCoverBg() {
+
+      // 随机更改首页面图片
+      function randomChangeCoverBg() {
          var r = document.querySelector(':root');
          var random = Math.ceil(Math.random() * 6);
          r.style.setProperty('--bg-bg', 'url(/static/img/cover-' + random + '.jpg) center center / cover');
       }
+      randomChangeCoverBg();
 
-      changeCoverBg();
+      // gitalk 评论系统配置
+      const gitalk = new Gitalk({
+         clientID: '971a227f66568ad21bd9',
+         clientSecret: '42eba56ec63f50c5cced68648f9925261ab856c6',
+         repo: 'cpfree', // 仓库名字
+         owner: 'cpfree', // github名字
+         admin: ['cpfree'], // 使用人or管理员
+         // facebook-like distraction free mode
+         distractionFreeMode: false
+      })
+
    </script>
 
    <!-- Markdown 引用样式美化 -->

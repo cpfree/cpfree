@@ -16,7 +16,8 @@
 
 /* 页面整体 */
 body{
-   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+   /* 太花里胡哨的字体, 手机端显示不出来 */
+   font-family: unset;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    font-size: 16px;
@@ -35,6 +36,20 @@ body{
    width: 100%;
 } */
 
+
+/* ==========================
+         优化侧边栏
+===========================*/
+
+li[class] {
+   /* 当前侧边栏 active 相关页面背景变色 */
+   background: antiquewhite;
+}
+
+.sidebar-nav .active {
+   /* 当前侧边栏 active 相关页面对应标题背景变色 */
+   background: #cec5bb;
+}
 
 
 /* 优化导航栏 */
@@ -88,8 +103,11 @@ body{
 }
 
 
-/* 解决2K下 markdown 的渲染显示问题 */
+/* ==========================
+   docsify 样式冲突以及渲染bug
+===========================*/
 
+/* 解决2K下 markdown 的渲染显示问题 */
 .markdown-section p, .markdown-section ul, .markdown-section ol {
    line-height: unset;
    word-spacing: 0.05rem;
