@@ -56,7 +56,6 @@
          color: var(--theme-color);
       }
       
-
       /* 标题头脚本 */
       .article-info-box {
          float: right;
@@ -81,8 +80,8 @@
       
       window.$docsify = {
          el: '#app',
-         name: 'CPFree note',
-         nameLink: 'http://cpfree.cn/',
+         name: '个人编程博客',
+         nameLink: '/',
          repo: 'https://github.com/sinjar-chen',
          logo: '',
          themeColor: 'rgb(102, 126, 233)',
@@ -129,6 +128,7 @@
             function(hook, vm) {
                hook.init(function() {
                   // 初始化完成后调用，只调用一次，没有参数。
+                  console.log('init :  \n' + arguments)
                });
                hook.beforeEach(function(content) {
                   // 每次开始解析 Markdown 内容时调用
@@ -149,21 +149,24 @@
                });
 
                hook.afterEach(function(html, next) {
-                  console.log(html)
+                  console.log('afterEach :  \n' + arguments)
                   next(html);
                });
 
                hook.doneEach(function() {
                   // 每次路由切换时数据全部加载完成后调用，没有参数。
                   // ...
+                  console.log('doneEach :  \n' + arguments)
                });
 
                hook.mounted(function() {
                   // 初始化并第一次加载完成数据后调用，只触发一次，没有参数。
+                  console.log('mounted :  \n' + arguments)
                });
 
                hook.ready(function() {
                   // 初始化并第一次加载完成数据后调用，没有参数。
+                  console.log('ready :  \n' + arguments)
                });
             }
          ]
@@ -182,7 +185,6 @@
    <!-- 引入搜索模块 -->
    <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
    <!-- 引入 gitalk 评论系统 -->
-   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 
    <!-- docsify内置的代码高亮工具是 Prism。添加额外的语法支持需要通过CDN添加相应的语法文件 -->
@@ -202,10 +204,9 @@
    <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
    <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
 
-   <!-- 访问量统计 -->
-   <!-- 我的阿里云服务器 G-JW67PQZXGS -->
-   <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js" data-ga="G-JW67PQZXGS"></script> -->
+   <!-- 谷歌统计 - Google Analytics -->
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js" data-ga="G-SNGE4TXFRV"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
 
    <!-- 置顶插件 -->
    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -213,6 +214,8 @@
    
    <!-- Markdown 引用样式美化 -->
    <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+   <!-- mouse click 出现红心 💕❤-->
+   <script src="https://cdn.jsdelivr.net/gh/forthespada/forthespada.github.io@master/plugin/click_heart.js"></script>
 
    <script src="static/js/my-plugin.js"></script>
 </body>

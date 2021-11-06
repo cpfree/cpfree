@@ -13,8 +13,6 @@
 - <span style="font-size:20px">科学计划,重要紧急; 自规自律,依时作息!</span>
 - <span style="font-size:20px">深入底层,全面思维; 穷尽抽象,简单高级!</span>
 
-👀本站总访问量：<span id="busuanzi_value_site_pv"></span> 次</span>
-
 <br/>
 <br/>
 
