@@ -1,8 +1,15 @@
 
+/* ================================================
+   Global site tag (gtag.js) - Google Analytics  
+================================================ */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SNGE4TXFRV');
 
-
-/* ============================================= start
-   百度访问量统计 */
+/* ================================================
+   百度访问量统计
+================================================ */
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -10,9 +17,6 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-/* 置顶功能 
-================================================ end */
-      
 
 
 
