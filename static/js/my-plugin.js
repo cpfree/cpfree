@@ -18,11 +18,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 
-
-
-/* ============================================= start
-   页面信息, 从markdown文件中提取, 提取文件头部 */
-
+/* ================================================
+   页面信息, 从markdown文件中提取, 提取文件头部
+================================================ */
 const headInfo = {
    headStr: '',
    props: {
@@ -89,45 +87,34 @@ const headInfo = {
    }
 }
    
-/* 页面信息, 从markdown文件中提取, 提取文件头部 
-================================================ end */
 
-
-
-/* ============================================= start
-   置顶功能 */
+/* ================================================
+   置顶功能
+================================================ */
 $('.to-top').toTop();
-/* 置顶功能 
-================================================ end */
    
 
-
-/* ============================================= start
-   PWA 离线化 */
+/* ================================================
+   PWA 离线化
+================================================ */
 if (typeof navigator.serviceWorker !== 'undefined') {
    navigator.serviceWorker.register('/static/js/pwa.js')
 }
-/* PWA 离线化 
-================================================ end */
 
 
-
-/* ============================================= start
-   随机更改首页面图片方法  
-================================================ end */
+/* ================================================
+   随机更改首页面图片方法
+================================================ */
 (function randomChangeCoverBg() {
    var r = document.querySelector(':root');
-   var random = Math.ceil(Math.random() * 6);
-   r.style.setProperty('--bg-bg', 'url(/static/img/cover-' + random + '.jpg) center center / cover');
+   var random = Math.floor(Math.random() * 10);
+   r.style.setProperty('--bg-bg', 'url(/static/img/cover/cover-' + random + '.jpg) center center / cover');
 })();
 
 
-
-
-/* ============================================= start
-   gitalk 评论系统配置  
-================================================ end */
-
+/* ================================================
+   gitalk 评论系统配置
+================================================ */
 const gitalk = new Gitalk({
    clientID: 'edf6d1bdc2b647c0d53f',
    clientSecret: '9b65a8278d7e52a2f8e85d39126796b74e297086',
@@ -170,7 +157,7 @@ function calcGitalkIdAndTitle () {
    // 若 headInfo 中没有配置id和title, 则通过 URL 计算id, title
    var title = location.hash.match(/#(.*?)([?]|$)/)
    if (title != null && title.length > 1) {
-      title = title[1];
+      title = decodeURI(title[1]);
    } else {
       title = ''
    }
@@ -213,5 +200,3 @@ $docsify.plugins = [].concat(function(i) {
       }
 	})
 }, $docsify.plugins);
-
-

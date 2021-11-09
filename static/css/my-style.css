@@ -1,27 +1,27 @@
-:root{
-   /* 继承 */
-   --theme-color: #525252 !important;
-   /* base color */
-   --back-color: white;
-   --font-color: black;
-   --title-color: rgb(109, 177, 114);
+:root {
+  /* 继承 */
+  --theme-color: #428 !important;
+  --theme-holder-color: #64a !important;
+  --back-color: #ffffff;
+  --font-color: #000000;
+  --title-color: #d8d8d8;
 
-   /* 特定组件 */
-   --nav-color: var(--back-color);
-   --nav-text-hover-color: #ffa724;
-   --nav-background: #525252;
-   --nav-item-background: #525252;
-   --markdown-background: rgb(247, 247, 247);
+  /* 特定组件 */
+  --nav-color: var(--back-color);
+  --nav-text-hover-color: #ffa724;
+  --nav-background: #525252;
+  --nav-item-background: #525252;
+  --markdown-background: #f7f7f7;
 }
 
 /* 页面整体 */
-body{
-   /* 太花里胡哨的字体, 手机端显示不出来 */
-   font-family: unset;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-   font-size: 16px;
-   color: #2c3e50;
+body {
+  /* 太花里胡哨的字体, 手机端显示不出来 */
+  font-family: unset;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  color: #2c3e50;
 }
 
 /* 封面 */
@@ -36,26 +36,23 @@ body{
    width: 100%;
 } */
 
-
 /* ==========================
          优化侧边栏
 ===========================*/
 
 .sidebar-nav li[class] {
-   /* 当前侧边栏 active 相关页面背景变色 */
-   background: #fff5ba;
+  /* 当前侧边栏 active 相关页面背景变色 */
+  background: linear-gradient(to right, var(--title-color), #0000);
 }
 
 .sidebar-nav .app-sub-sidebar .active {
-   /* 当前侧边栏 active 相关页面对应标题背景变色 */
-   background: #ffe5aa;
+  /* 当前侧边栏 active 相关页面对应标题背景变色 */
+  background: var(--title-color);
 }
-
-
 
 /* 优化导航栏 */
 .app-nav a:hover {
-   color: var(--nav-text-hover-color);
+  color: var(--nav-text-hover-color);
 }
 
 .app-nav > li > ul > li {
@@ -103,18 +100,137 @@ body{
   margin-bottom: 4px;
 }
 
+/* ==========================
+         优化插件 github-corner
+===========================*/
+
+.github-corner svg:hover {
+   color: #fff;
+   fill: var(--theme-holder-color);
+ }
+
+
+/* ==========================
+         优化插件 Gitalk
+===========================*/
+
+.gt-container a {
+  color: var(--theme-color);
+}
+.gt-container a:hover {
+  color: var(--theme-holder-color);
+  border-color: var(--theme-holder-color);
+}
+.gt-container .gt-svg svg {
+  fill: var(--theme-color);
+}
+.gt-container .gt-spinner::before {
+  border-top-color: var(--theme-color);
+}
+.gt-container .gt-btn {
+  border: 1px solid var(--theme-color);
+  background-color: var(--theme-color);
+  color: #fff;
+}
+.gt-container .gt-btn-preview {
+  background-color: #fff;
+  color: var(--theme-color);
+}
+.gt-container .gt-btn-preview:hover {
+  background-color: #f2f2f2;
+  border-color: var(--theme-holder-color);
+}
+.gt-container .gt-btn-public:hover {
+  background-color: var(--theme-holder-color);
+  border-color: var(--theme-holder-color);
+}
+.gt-container .gt-link {
+  border-bottom: 1px dotted var(--theme-color);
+}
+.gt-container .gt-user .is--poping .gt-ico svg {
+  fill: var(--theme-color);
+}
+.gt-container .gt-popup .gt-action.is--active:before {
+  background: var(--theme-color);
+}
+.gt-container .gt-header-controls-tip {
+  color: var(--theme-color);
+}
+.gt-container .gt-comment-username {
+  color: var(--theme-color);
+}
+
+/* ============================================= */
+/*                 markdown 内容渲染             */
+/* ============================================= */
+
+/* markdown content found on pages */
+.markdown-section h1 {
+  /* 1  2/3  5/6  */
+  background: linear-gradient(
+    to right,
+    var(--title-color),
+    var(--title-color),
+    var(--title-color),
+    var(--title-color),
+    #0000
+  );
+  font-size: 3rem;
+  margin: 0 0 1rem;
+}
+.markdown-section h2 {
+  /* 3/4  2/3  5/6  */
+  background: linear-gradient(
+    to right,
+    var(--title-color),
+    var(--title-color),
+    var(--title-color),
+    #0000,
+    #0000
+  );
+  font-size: 2.5rem;
+  margin: 45px 0 0.8rem;
+}
+/* 1/2  2/3  5/6  */
+.markdown-section h3 {
+  background: linear-gradient(
+    to right,
+    var(--title-color),
+    var(--title-color),
+    #0000,
+    #0000,
+    #0000
+  );
+  font-size: 2rem;
+  margin: 40px 0 0.6rem;
+}
+/* 1/4  2/3  5/6  */
+.markdown-section h4 {
+  background: linear-gradient(
+    to right,
+    var(--title-color),
+    #0000,
+    #0000,
+    #0000,
+    #0000
+  );
+  font-size: 1.5rem;
+}
 
 /* ==========================
    docsify 样式冲突以及渲染bug
 ===========================*/
 
 /* 解决2K下 markdown 的渲染显示问题 */
-.markdown-section p, .markdown-section ul, .markdown-section ol {
-   line-height: unset;
-   word-spacing: 0.05rem;
+.markdown-section p,
+.markdown-section ul,
+.markdown-section ol {
+  line-height: unset;
+  word-spacing: 0.05rem;
 }
-.markdown-section figure, .markdown-section p {
-   margin: 0.6em 0;
+.markdown-section figure,
+.markdown-section p {
+  margin: 0.6em 0;
 }
 
 /* end */

@@ -1,6 +1,6 @@
 <!-- docs/_sidebar -->
 
-* [**首页**](/)
+* [**首页**](/README)
 * **原创**
    * [binary-data-map](pblog/design-code/bit-data-map/binary-data-map.blog)
    * [endpoint-io-transfer](pblog/design-code/bit-data-map/endpoint-io-transfer.blog)

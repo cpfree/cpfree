@@ -130,9 +130,9 @@ gitee: [https://gitee.com/cosycode/bit-data-map`](https://github.com/cosycode/bi
 
    ```xml
    <dependency>
-   <groupId>com.github.cosycode</groupId>
-   <artifactId>bit-data-map</artifactId>
-   <version>1.1</version>
+      <groupId>com.github.cosycode</groupId>
+      <artifactId>bit-data-map</artifactId>
+      <version>1.1</version>
    </dependency>
    ```
 
