@@ -4,23 +4,6 @@ git 可以为每个项目建立不同的密钥, 不同账号配置不同的密�
 
 ## git 和 svn 区别
 
-## git config
-
-### git 配置文件
-
-| git config 命令              | 对应文件                          | 含义                        | 备注                |
-| ---------------------------- | --------------------------------- | --------------------------- | ------------------- |
-| `git config --list`          |                                   | 查看现在的 git 环境详细配置 |
-| `git config --system --list` | `%GitPath%\mingw64\etc\gitconfig` | 查看系统 config             | 整个系统只有一个    |
-| `git config --global --list` | `$home.gitconfig`                 | 查看当前用户（global）配置  | 每个账户只有一个    |
-| `git config --local --list`  | `%RepoPath%.git\config`           | 查看当前仓库配置信息        | 每个 git 仓库有一个
-
-> `--list` 也可以换成 `-l`
->
-> `%GitPath%`为 Git 的安装路径，`%RepoPath%`为某仓库的本地路径。
->
-> 三个配置文件优先级是 `system < global < local`
-
 ### git 配置文件详解
 
 用户目录下 `.gitconfig` 示例
@@ -67,9 +50,31 @@ git 可以为每个项目建立不同的密钥, 不同账号配置不同的密�
    ```
 
 
-## git 命令
+## git 操作命令
 
-## 将一个 git 仓库的子目录拆分成一个单独的库
+### git撤销(reset & resolve)
+
+1. git reset: reset 是移动本地 git 的当前版本的节点指针 
+ 
+   例如下图, 在使用reset之前, head在D点, C, D 均是错误提交, 现在想要将撤销C, D 的提交, 将提交回滚到 B
+   ![](https://gitee.com/cpfree/picture-warehouse/raw/master/pic1/20211123210921.png)
+
+   执行之后如下图, head 指针已经指向了 B.
+
+   ![](https://gitee.com/cpfree/picture-warehouse/raw/master/pic1/20211123211209.png)
+
+   但是这样该法有几个问题
+   1. 只能修改本地, 无法进行修改远程, 远程的head指针, 依然指向D
+   2. 此时若是想要push, 则会报错, 需要使用 `git push -f` 强制往远程推送.
+   3. 一旦`push -f`之后, C, D的提交信息将无法再找回来.
+
+2. git revert
+
+   git revert 的命令是, 生成一个新的提交E, 而新的E提交内容刚好是撤销掉C, D 两次的提交, 使得E的内容和B的一模一样.
+
+一般来说, 有些公司明确禁止使用reset, 推荐使用`git revert`. 因为数据无价, 操作时还是小心谨慎为好.
+
+### 将一个 git 仓库的子目录拆分成一个单独的库
 
 使用 `git subtree split` 命令
 

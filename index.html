@@ -16,13 +16,13 @@
    <link rel="stylesheet" type="text/css" href="static/docsify/css/vue.css">
 
    <!-- font-awesome -->
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   <!-- gitalk 评论系统 -->
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
    <!--网页标题左侧显示-->
    <link rel="icon" href="static/img/logo.png" type="image/x-icon">
    <!--收藏夹显示图标-->
    <link rel="shortcut icon" href="static/img/logo.png" type="image/x-icon">
-   <!-- gitalk 评论系统 -->
-   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
    <!-- 自定义css -->
    <link rel="stylesheet" type="text/css" href="static/css/my-style.css" />
    <style>
@@ -78,7 +78,7 @@
    <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
    <!-- emoji -->
    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-   <!-- 引入 gitalk 评论系统 -->
+   <!-- gitalk 评论系统 -->
    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
    <!-- edit-on-git 需在 window.$docsify 前引入 -->
    <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
@@ -123,6 +123,11 @@
          remoteMarkdown: {
             tag: 'remoteMarkdownUrl',
          },
+
+         alias: {// 取消嵌套的侧边栏, 页面加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录
+            '/.*/_navbar.md': '/_navbar.md'
+         },
+
          // markdown 渲染
          plugins: [
             EditOnGithubPlugin.create(
@@ -156,6 +161,13 @@
                });
             }
          ],
+         tabs: {
+            persist    : true,      // default
+            sync       : true,      // default
+            theme      : 'classic', // default
+            tabComments: true,      // default
+            tabHeadings: true       // default
+         },
          pagination: {
             previousText: '上一章节',
             nextText: '下一章节',
@@ -165,6 +177,8 @@
       }
    </script>
 
+   <!-- tab 标签           (需在 window.$docsify 后引入) -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
    <!-- 上下页链接         (需在 window.$docsify 后引入) -->
    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
    <!-- 引入搜索模块       (需在 window.$docsify 后引入) -->
@@ -186,6 +200,7 @@
    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-go.min.js"></script>
 
    <!-- 谷歌统计 - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNGE4TXFRV"></script>

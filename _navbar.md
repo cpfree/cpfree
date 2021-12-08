@@ -27,3 +27,7 @@
    * [game](/static/html/game/)
       * [2048](/static/html/game/game2048)
       * [五子棋](/static/html/game/gobang)
+* ◼️编程基础
+   * **算法**
+      * [链表操作](pbase/arithmetic/modal/链表操作.md)
+      * [随机打乱数组](pbase/arithmetic/modal/随机打乱数组.md)
