@@ -6,6 +6,8 @@
 #后台执行程序
 nohup ${command} > /dev/null 2>&1 &
 
+> eg: `nohup java -jar /home/sinjar/app/my-project.jar > /dev/null 2>&1 &`
+
 #查看后台程序
 ps aux |grep "test.sh"  #a:显示所有程序  u:以用户为主的格式来显示   x:显示所有程序，不以终端机来区分
 ps -ef |grep "test.sh"  #-e显示所有进程。-f全格式。
@@ -24,3 +26,6 @@ kill  -9 1001  #-9表示强制关闭
 2. nohup的意思是忽略SIGHUP信号， 所以当运行nohup ./a.out的时候， 关闭shell, 那么a.out进程还是存在的（对SIGHUP信号免疫）。 但是， 要注意， 如果你直接在shell中用Ctrl C, 那么, a.out进程也是会消失的（因为对SIGINT信号不免疫）
 
 3. 所以， &和nohup没有半毛钱的关系， 要让进程真正不受shell中Ctrl C和shell关闭的影响， 那该怎么办呢？ 那就用nohua ./a.out &吧， 两全其美。
+
+
+
