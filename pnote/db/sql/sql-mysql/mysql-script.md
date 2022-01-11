@@ -80,3 +80,41 @@ FROM
 WHERE
    t.TABLE_TYPE = 'BASE TABLE' and c.table_schema = 'interest' and c.data_type in ('char', 'varchar') and c.IS_NULLABLE = 'YES';
 ```
+
+
+## 查看所有库的大小
+
+```sql
+select
+   concat(round(sum(DATA_LENGTH/1024/1024),2),'MB') as ALL_DB_DATA_SIZE,
+   concat(round(sum(INDEX_LENGTH/1024/1024),2),'MB') as ALL_DB_INDEX_SIZE,
+   concat(round(sum((DATA_LENGTH + INDEX_LENGTH)/1024/1024),2),'MB') as ALL_DB_TOTAL_SIZE
+from information_schema.TABLES;
+```
+
+## 查看所有库的大小的排名
+
+```sql
+select
+   table_schema as DB_NAME,
+   concat(round(sum(DATA_LENGTH/1024/1024),2),'MB') as DB_DATA_SIZE,
+   concat(round(sum(INDEX_LENGTH/1024/1024),2),'MB') as DB_INDEX_SIZE,
+   concat(round(sum((DATA_LENGTH + INDEX_LENGTH)/1024/1024),2),'MB') as DB_TOTAL_SIZE
+from information_schema.TABLES
+group by table_schema
+order by sum(DATA_LENGTH + INDEX_LENGTH) desc;
+```
+
+## 查看指定库的表的大小排名
+
+```sql
+select
+   table_name as TABLE_NAME,
+   table_rows AS ROW_NUM,
+   concat(round(DATA_LENGTH/1024/1024,2),'MB') as TABLE_DATA_SIZE,
+   concat(round(INDEX_LENGTH/1024/1024,2),'MB') as TABLE_INDEX_SIZE,
+   concat(round((DATA_LENGTH + INDEX_LENGTH)/1024/1024,2),'MB') as TABLE_TOTAL_SIZE
+from information_schema.TABLES
+where table_schema='db_mx_vehicle_parts'
+order by (DATA_LENGTH + INDEX_LENGTH) desc;
+```
