@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220124-124917
+---
+
 # localstorage & sessionstorage
 
 `WebStorage` 的目的是克服由 cookie 所带来的一些限制，当数据需要被严格控制在客户端时，不需要持续的将数据发回服务器。

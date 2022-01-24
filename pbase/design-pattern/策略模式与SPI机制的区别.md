@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220124-124813
+---
+
 # 策略模式和SPI机制区别
 
 参考网址: <http://www.imooc.com/article/75027?tdsourcetag=s_pcqq_aiomsg>

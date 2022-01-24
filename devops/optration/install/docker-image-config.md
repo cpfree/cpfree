@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100017
+---
+
 # docker 安装配置
 
 ## docker 安装配置nginx

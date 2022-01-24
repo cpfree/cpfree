@@ -1,4 +1,9 @@
-
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100001
+---
 
 ## springBoot 集成 shiro 注意事项
 
@@ -117,7 +122,3 @@ spring里面有一个特性, 就是被 Spring 管理的 Bean 里面只要有实�
    导致访问不到的资源全部返回了 `loginUrl`, 而不是`404`
 
 2. `loginUrl` 没有配置, 默认的是 `login.jsp`, 结果又拿不到资源, 继而又重定向 `loginUrl`, 由此形成了循环重定向
-
-
-
-

@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220124-124638
+---
+
 # prime
 
 ## 简单方式

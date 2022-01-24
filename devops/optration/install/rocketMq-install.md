@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100034
+---
+
 # rocketMQ 安装配置篇
 
 ## linux

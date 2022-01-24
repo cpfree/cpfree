@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100031
+---
+
 # rabbitMQ 安装
 
 [TOC]
@@ -235,4 +242,3 @@ source  /etc/profile
          ```
 
       再按照上面的方法进行一遍操作即可。
-

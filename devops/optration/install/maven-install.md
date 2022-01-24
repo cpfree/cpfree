@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100026
+---
+
 # maven-install
 
 1. 下载 maven 最新版

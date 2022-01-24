@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100004
+---
+
 # 使用IDEA搭建SpringBoot多环境多配置文件
 
 启动SpringBoot

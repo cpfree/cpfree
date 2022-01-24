@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100007
+---
+
 # 搭建 spring-boot web 工程
 
 ## 1. 引入模块
@@ -60,5 +67,3 @@
          </dependencies>
       </dependencyManagement>
    ```
-
-

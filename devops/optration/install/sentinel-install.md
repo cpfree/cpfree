@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100035
+---
+
 ## window 环境安装部署
 
 1. 到 alibaba github 上去下载 sentinel: <https://github.com/alibaba/Sentinel/releases>

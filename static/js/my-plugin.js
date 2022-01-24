@@ -69,16 +69,25 @@ const headInfo = {
          keywordsHtml += obj.keywords.map(it => '<span class="keywords">' + it + '</span>').join('');
          keywordsHtml += '</div>';
       }
-      // render
+      // render URL
       if (obj.url && obj.url.length > 0) {
          urlHtml += '<div class="label-url"><span class="label">参考网址：</span></div>' +
             '<div class="ref-url">';
-         urlHtml += obj.url.map(it => {
+         // 渲染 URL 函数
+         var urlRenderFun = it => {
             if (it.startsWith('<') && it.endsWith('>')) {
                it = it.substring(1, it.length-1);
             }
-            return it;
-         }).map(it => '<a href="' + it + '">' + it + '</a>').join('');
+            if (!it) {
+               return '';
+            }
+            return '<a href="' + it + '">' + it + '</a>';
+         }
+         if (Array.isArray(obj.url)) {
+            urlHtml += obj.url.map(urlRenderFun).join('');
+         } else {
+            urlHtml += urlRenderFun(obj.url);
+         }
          urlHtml += '</div>';
       }
       domHtml = domHtml.replace('@keywords', keywordsHtml)
@@ -92,7 +101,8 @@ const headInfo = {
    置顶功能
 ================================================ */
 $('.to-top').toTop();
-   
+$('.to-top').addClass('css-theme-color fa fa-arrow-circle-up fa-3x');
+
 
 /* ================================================
    PWA 离线化
@@ -147,7 +157,7 @@ function calcGitalkIdAndTitle () {
             obj.title = props.title;
          } else {
             obj.title = props.id;
-            console.log('配置了title 但是title 没有不合法, title用id替代, title: ' + props.title);
+            console.log('配置了title 但是title 没有不合法, title用id替代, title: ' + props.title + ', id => ' + props.id);
          }
          return obj;
       } else {
@@ -180,7 +190,7 @@ $docsify.plugins = [].concat(function(i) {
 		n.id = "gitalk-container";
 		var t = e.getNode("#main");
 		n.style = "width: " + t.clientWidth + "px; margin: 0 auto 20px;", e.appendTo(e.find(".content"), n)
-      console.log('gitalk 添加 gitalk-container')
+      // console.log('gitalk 添加 gitalk-container')
 	}), i.doneEach(function(i) {
       // 移除所有元素
       var n = document.getElementById("gitalk-container")
@@ -189,7 +199,7 @@ $docsify.plugins = [].concat(function(i) {
             n.removeChild(n.firstChild);
          }
          var obj = calcGitalkIdAndTitle();
-         console.log('gitalk render gitalk-container by ==> ', obj)
+         // console.log('gitalk render gitalk-container by ==> ', obj)
          gitalk.options.id = obj.id;
          gitalk.options.title = obj.title;
          // 渲染 gitalk 评论组件(id 和 title 有意义才渲染)

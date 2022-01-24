@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100027
+---
+
 # mysql install
 
 [toc]
@@ -193,5 +200,3 @@ show grants for 'xxh'@'%';
    mysql Mysql8.0 centos yum
 
 ## mysql 配置
-
-

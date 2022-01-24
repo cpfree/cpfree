@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100000
+---
+
 # springboot-shiro autoconfig
 
 > `shiro` 网上介绍的很乱, 当然和乱七八糟的版本也有关系, 需要问题, 请参照官网和源码 <https://shiro.apache.org/spring-boot.html>

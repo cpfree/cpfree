@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100019
+---
+
 # es docker安装
 
 ## docker 安装 elasticsearch:6.4.3, 并安装中文分词插件

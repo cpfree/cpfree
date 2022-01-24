@@ -1,6 +1,11 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220124-124828
+---
+
 # pattern-summary
-
-
 
 ## 设计模式分类
 

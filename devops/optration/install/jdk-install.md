@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100025
+---
+
 # jdk install
 
 ## CentOx 7 x64安装

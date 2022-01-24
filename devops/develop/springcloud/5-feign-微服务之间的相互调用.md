@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100011
+---
+
 # feign
 
 ## 修改 `one-service` 工程
@@ -93,4 +100,3 @@
 5. 启动项目进行测试.
 
    ![](https://gitee.com/cpfree/picture-warehouse/raw/master/devops-note/1642429934785.png)
-

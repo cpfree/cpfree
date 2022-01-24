@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100018
+---
+
 # docker install
 
 ## CentOs

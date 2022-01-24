@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100012
+---
+
 # spring-boot-starter-actuator
 
 spring-boot-starter-actuator模块是一个spring提供的监控模块。我们在开运行发过程中，需要实时和定时监控服务的各项状态和可用性。Spring Boot的spring-boot-starter-actuator 模块（健康监控）功能提供了很多监控所需的接口，可以对应用系统进行配置查看、相关功能统计等。
@@ -87,5 +94,3 @@ SBA则是基于Actuator更加进化了一步，其是一个针对Actuator接口�
       <artifactId>spring-boot-admin-server-ui</artifactId>
    </dependency>
    ```
-
-2. 

@@ -1,6 +1,8 @@
 
 <!-- * 快速入门 -->
 * ◼️内容导航
+   * **[binary-data-map](/devops)**
+      * [binary-data-map](/devops/)
    * **原创内容**
       * [binary-data-map](pblog/design-code/bit-data-map/binary-data-map.blog)
       * [endpoint-io-transfer](pblog/design-code/bit-data-map/endpoint-io-transfer.blog)

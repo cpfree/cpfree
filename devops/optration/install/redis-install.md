@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100033
+---
+
 # redis 安装配置
 
 ## 源码安装
@@ -53,4 +60,3 @@
    # 无日志 绝对路径 启动
    > nohup /.../redis-6.2.5/src/redis-server /.../redis-6.2.5/redis.conf > /dev/null 2>&1 &
    ```
-

@@ -1,10 +1,11 @@
-# Maven仓库
-
 ---
 keys: maven
 type: copy
 url: <https://www.cnblogs.com/gengaixue/p/6933773.html>, <https://my.oschina.net/sunchp/blog/100634>
+id: 220124-141952
 ---
+
+# Maven仓库
 
 ## 仓库介绍
 

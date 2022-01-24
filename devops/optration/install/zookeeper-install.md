@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100036
+---
+
 # zookeeper-install
 
 > [zookeeper 安装](https://m.w3cschool.cn/zookeeper/zookeeper_installation.html)

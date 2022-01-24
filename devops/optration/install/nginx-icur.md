@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100028
+---
+
 # nginx install and config
 
 ## linux CentOs x64

@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220100-100029
+---
+
 # node.js
 
 1. 下载 `node.js` : `node-v10.15.0-linux-x64.tar.xz`， 解压到想要安装的位置， 确认一下nodejs下bin目录是否有node 和npm文件，如果有执行软连接，如果没有重新下载执行上边步骤。
