@@ -133,7 +133,50 @@
 
 #### docker 安装redis
 
-查看最新教程
+1. 搜索镜像
+   `docker search redis`
+
+2. 拉取镜像
+   `docker pull redis`
+
+3. 创建Redis容器并设置密码
+
+   ```shell
+   # 不设置密码启动
+   > docker run --name redis -p 6380:6379 redis-test
+
+   # 设置密码启动
+   > docker run --name redis -p 6380:6379 redis-test --requirepass 123456
+   ```
+
+4. 使用密码 `123456` 连接 `redis` 测试.
+
+5. 查看密码 和 修改密码
+
+   为现有的redis创建密码或修改密码的方法：
+
+   ```shell
+   # docker 进入 redis 的容器
+   [sinjar@sinjar-aliyun-0 ~]$ docker exec -it redis-test /bin/bash
+
+   # 进入 /usr/local/bin 目录
+   root@e1faa8b01b13:/# cd /usr/local/bin
+   
+   # 该文件夹里面有 redis-cli
+   root@e1faa8b01b13:/usr/local/bin# ls
+   docker-entrypoint.sh  gosu  redis-benchmark  redis-check-aof  redis-check-rdb  redis-cli  redis-sentinel  redis-server
+
+   # 运行命令 启动客户端
+   root@e1faa8b01b13:/usr/local/bin# redis-cli
+
+   # 查看现有的redis密码
+   127.0.0.1:6379> config get requirepass
+   1) "requirepass"
+   2) ""
+
+   # 设置redis密码 为 abc123
+   127.0.0.1:6379> config set requirepass abc123
+   ```
 
 #### mysql 安装笔记
 
