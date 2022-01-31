@@ -49,13 +49,24 @@ parent  // 一个git目录
 
 但是由于此时合并的时候, 不是一个空仓库, 因此, 此处有点变化
 
-3. 进入目标git库拉取分支
+方案一: 进入目标git库拉取分支
 
    ```shell
    git pull ../parent child1-branch --allow-unrelated-histories
    ```
 
    此处需要加上`--allow-unrelated-histories`, 如果不加, 合并则会出现 `fatal: refusing to merge unrelated histories` 的提示.
+
+方案二: 进入目标git库拉取分支
+
+   ```shell
+   # 从另一个git工程:parent 获取一个分支 child1-branch, 并将这个分支以 develop 链的 child1-branch
+   git fetch ../parent child1-branch develop:child1-branch
+   # 合并分支
+   get merge child1-branch origin/develop --allow-unrelated-histories
+   git push
+   ```
+
 
 ### 从远程 git 合并两个不同的仓库
 
@@ -79,9 +90,9 @@ git checkout develop
 # 添加远程连接, 并将命名为 child2
 git remote add child2 https://github.com/username/child2
 # 获取 child2 仓库的 master 分支更新, 并将分支名为 child2
-git fetch child2 master:child2 
+git fetch child2 develop:child2 
 
 # 合并分支
-git merge child2 master
+git merge child2 develop
 git push
 ```
