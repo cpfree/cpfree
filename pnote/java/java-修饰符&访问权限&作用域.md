@@ -36,8 +36,6 @@
       */
       class Son extends Father {
 
-         
-
          public void test1() {
             // FIXME 爆红, 编译的话会失败, 
             System.out.println(a);
@@ -55,4 +53,4 @@
 
    ```
 
-
+> 在嵌套类里面, 使用super关键字, 是可以调到 a 的, 但是不使用super关键字的话, 就无法调用到a, 但是若`Son` 和`Father` 不在嵌套类里面的话是可以直接调用到`a`的
