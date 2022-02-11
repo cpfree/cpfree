@@ -1,11 +1,9 @@
 ---
 keys: 
-type: copy,blog,trim
+type: blog
 url: <>
 id: 220206-211233
 ---
-
-# spring 配置规范
 
 ## spring 注入方式
 
@@ -13,19 +11,34 @@ id: 220206-211233
 2. Constructor Injection : 仅仅写一个构造方法, 在构造方法上面添加一个`@Autowired`
 3. Setter Injection : set方法上面加一个 `@Autowired`
 
-> 在 Spring 4.3 及以后的版本中, `Setter Injection` 和 `Constructor Injection` 上面的 @Autowired 注解是可以不写的。
+> 在 Spring 4.3 及以后的版本中 `Constructor Injection` 上面的 `@Autowired` 注解是可以不写的。
 
 ### 三种注入方式的优缺点分析1
 
 1. 三种注入方式的优缺点分析
-
-   > 参考自: <https://baijiahao.baidu.com/s?id=1715596620406357296>
 
    ![](https://gitee.com/cpfree/picture-warehouse/raw/master/pic1/1644141208626.png)
 
    > Constructor Injection和Setter Injection的方式更容易Mock和注入对象，所以更容易实现单元测试。
 
    从图片中看Constructor Injection在很多方面都是优于其他两种方式的，所以Constructor Injection通常都是首选方案！
+
+2. 注入异常
+
+   1. Field Injection 使用对象或接口接收的话, 若是找不到Bean, 是会抛异常的.
+      
+      ```log
+      Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.hydroxyl.xxxx' available: expected at least 1 bean which qualifies as autowire candidate. 
+      ```
+
+      但是和`Optional` 结合用, 即便找不到 `Bean` 也不会抛异常
+
+      ```java
+      @Autowired
+      private Optional<Comp> comp;
+      ```
+
+   2. Setter 方法即便没有找到 对应的Bean, 也不会抛异常, 因此更加适合测试.
 
 ### 三种注入方式的优缺点分析2
 
@@ -119,4 +132,128 @@ public class HelpService {
    @Service
    public class UserService extends BaseService<User>{}
    ```
- 
+
+## 实例
+
+1. Setter 注入是可以注入 String 的, 但是不能注入基础数据和包装类, 如果参数是 `Integer` 和 `int` 的话, 是会报错的.
+
+   ```java
+   // 写Bean的时候返回个 Integer
+   @Bean
+   public Integer num() {
+      return 9;
+   }
+
+   // 以下注入会报错
+   @Autowired
+   public void setNum(Integer num) {
+      this.num = num;
+   }
+   ```
+
+2. 类型注入是可以注入 String, Integer, int 这些数据的.
+
+   如下, 都是可以注入成功的
+
+   ```java
+   @Autowired
+   private Integer num1;
+
+   @Autowired
+   private int num2;
+   ```
+
+   甚至 写Bean的时候返回个 `int`, 之后注入的时候使用 `Integer`去接收, 都是可以的, 反过来也可以.
+
+   ```java
+   // 写Bean的时候返回个 int
+   @Bean
+   public int num() {
+      return 9;
+   }
+
+   // 注入的时候使用 Integer 接收
+   @Autowired
+   private Integer num1;
+   ```
+
+## set 注入
+
+假如说 `Comp` 是一个`Bean`
+
+标准的 setter 注入是下面这样
+
+   ```java
+   @Component
+   public class InjectTest {
+
+      private Comp comp;
+      
+      @Autowired
+      public void setComp(Comp comp) {
+         this.comp = comp;
+      }
+   }
+   ```
+
+但是下面的也可以成功注入, Spring 注入的时候是根据参数进行判断的,
+
+   ```java
+   @Component
+   public class InjectTest {
+
+      private Comp comp;
+      
+      @Autowired
+      public void h(Comp comp) {
+         this.comp = comp;
+      }
+   }
+   ```
+
+甚至参数什么都不写, 也是可以注入的, 相当于 `@postContract`, 但是触发的时机不同, `@postContract` 触发的时间更晚.
+
+   ```java
+   @Component
+   public class InjectTest {
+
+      @Autowired
+      public void fun() {
+        System.out.println("成功调用了无参方法");
+      }
+   }
+   ```
+
+   > 即便是不写参数，只要加了`@Autowire`也是会正常调用 `fun`方法的.
+
+## byname
+
+依赖注入的时候，当一个接口有多个Bean实现时，一个@Autowired是无法确定具体注入那个Bean的。这个时候可以使用名称限定具体注入哪个Bean
+
+如有以下两个Bean
+
+   ```java
+   @Bean
+   public Comp hehe0() {
+      return new Comp("hehe0");
+   }
+   @Bean
+   public Comp haha1() {
+      return new Comp("haha1");
+   }
+   ```
+
+1. `@Qualifier注解`
+
+   ```java
+   @Autowired
+   @Qualifier("hehe0")
+   private Comp comp0;
+   ```
+
+2. 使用带name属性的@Resource,同样可以完成上面的效果。
+
+   ```java
+   @Resource(name="hehe0")
+   private Comp comp0;
+   ```
