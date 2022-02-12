@@ -137,27 +137,6 @@ RequiredAnnotationBeanPostProcessor是Spring中的后置处理用来验证被@Re
 <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
 ```
 
-## 20  请举例说明@Qualifier注解
-
-依赖注入的时候，当一个接口有多个Bean实现时，一个@Autowired是无法确定具体注入那个Bean的。这个时候可以使用@Qualifier限定具体注入哪个Bean
-使用带name属性的@Resource,同样可以完成上面的效果。
-
-## 21  构造方法注入和设值注入有什么区别
-
-1. 在Setter注入, 可以将依赖项部分注入, 构造方法注入不能部分注入。
-
-2. 如果同一属性既可以Setter注入，也可以构造方法注入， 那么Setter注入可以覆盖构造方法注入，反之不行。
-
-3. 构造方法注入适合创建必要构造参数，Setter方法注入适合非强制依赖注入。
-
-4. 循环依赖问题，A和B对象相互依赖，如果仅仅使用构造方法注入，则会抛出异常，但是Setter方法注入可以解决循环依赖问题。、
-
-5. 构造方法注入只能在构造期间注入，**代码偏强**，需要稍稍注意写代码的逻辑，代码写的有问题很容易就报错，bug很容易发现，可以有效减少代码bug。
-
-6. Setter方法注入提供过多的修改入口，**代码偏弱**，可以傻瓜小白式写代码，即便代码写的乱起八糟，也能正常运行，一旦有bug，很难发现。
-
-7. 构造方法注入必要参数，setter方法注入非必要参数也是一种方法。
-
 ## 22  Spring框架中有哪些不同类型的事件
 
 Spring的ApplicationContext 提供了支持事件和代码中监听器的功能。
