@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 210515-173509
+---
+
 # mysql 日志处理
 
 ## 1. 日志配置
@@ -8,8 +15,7 @@ sql_log_bin
 
 SET sql_log_bin = {0|1}
 
-官网地址
-https://dev.mysql.com/doc/refman/8.0/en/set-sql-log-bin.html
+官网相关地址: <https://dev.mysql.com/doc/refman/8.0/en/set-sql-log-bin.html>
 
 ## 1.2 关闭mysql日志
 

@@ -1,3 +1,10 @@
+---
+keys: 
+type: trim
+url: <>
+id: 220215-171567
+---
+
 # mysql-innodb
 
 > 参考书籍: <<mysql 是怎样运行的>>
