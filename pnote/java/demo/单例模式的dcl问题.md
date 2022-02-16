@@ -1,3 +1,9 @@
+---
+keys: 
+type: blog
+url: <>
+id: 220216-184819
+---
 
 ### 双重检验锁：double-checked locking
 
