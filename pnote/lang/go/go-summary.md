@@ -39,7 +39,7 @@ Go 是编译型语言, 是第一门完全支持 UTF-8 的编程语言
    1. GO111MODULE: on
    2. GOPROXY: https://goproxy.io,direct
 
-   ![配置环境变量](2021-08-17-09-56-58.png)
+   ![配置环境变量](https://gitee.com/cpfree/picture-warehouse/raw/master/pic1/2021-08-17-09-56-58.png)
 
 4. 打开vscode, 安装`go`插件
    

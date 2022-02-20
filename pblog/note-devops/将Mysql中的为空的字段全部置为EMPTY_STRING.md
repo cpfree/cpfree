@@ -1,3 +1,10 @@
+---
+keys: 
+type: copy,blog,trim
+url: <>
+id: 220220-145723
+---
+
 # MYSQL 消灭所有NULL columns
 
 ## 来自于MYSQL官方的解释
