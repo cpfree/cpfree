@@ -538,7 +538,7 @@
 
 ## CtrlLoopThreadComp 源码
 
-> 就这一个类, 在开发的时候主键加入功能, 前前后后真的是更改了好久.
+> 就这一个类, 在开发的时候逐渐加入功能, 前前后后真的是更改了好久.
 
 ```java
 package com.github.cosycode.common.thread;
