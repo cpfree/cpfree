@@ -58,17 +58,7 @@ Spring MVC是一个基于MVC架构的用来简化web应用程序开发的应用
 
 View是一个接口， 它的实现类支持不同的视图类型（jsp，freemarker，pdf等等）
 
- 
 
-5、springMVC和struts2的区别有哪些?
-
-（1）springmvc的入口是一个servlet即前端控制器（DispatchServlet），而struts2入口是一个filter过虑器（StrutsPrepareAndExecuteFilter）。
-
-（2）springmvc是基于方法开发(一个url对应一个方法)，请求参数传递到方法的形参，可以设计为单例或多例(建议单例)，struts2是基于类开发，传递参数是通过类的属性，只能设计为多例。
-
-（3）Struts采用值栈存储请求和响应的数据，通过OGNL存取数据，springmvc通过参数解析器是将request请求内容解析，并给方法形参赋值，将数据和视图封装成ModelAndView对象，最后又将ModelAndView中的模型数据通过reques域传输到页面。Jsp视图解析器默认使用jstl。
-
- 
 
 6、SpringMVC怎么样设定重定向和转发的？
 
@@ -223,31 +213,16 @@ ISO8859-1是tomcat默认编码，需要将tomcat编码后的内容按utf-8编码
 
 答：返回值可以有很多类型,有String, ModelAndView，但一般用String比较好。
 
- 
 
 21、SpringMvc用什么对象从后台向前台传递数据的？
 
 答：通过ModelMap对象,可以在这个对象里面用put方法,把对象加到里面,前台就可以通过el表达式拿到。
 
- 
-
 22、SpringMvc中有个类把视图和数据都合并的一起的,叫什么？
 
 答：叫ModelAndView。
-
- 
 
 23、怎么样把ModelMap里面的数据放入Session里面？
 
 答：可以在类上面加上@SessionAttributes注解,里面包含的字符串就是要放入session里面的key。
 
- 
-
-24、当一个方法向AJAX返回特殊对象,譬如Object,List等,需要做什么处理？
-
-答：要加上@ResponseBody注解。
---------------------- 
-作者：a745233700 
-来源：CSDN 
-原文：https://blog.csdn.net/a745233700/article/details/80963758 
-版权声明：本文为博主原创文章，转载请附上博文链接！

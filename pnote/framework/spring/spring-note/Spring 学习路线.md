@@ -41,9 +41,3 @@
 ### IOC 容器初始化过程
 
 ---
-
-## 面试题
-
-   JavaBean 和 Spring Bean 的 区别
-   [关于Spring的69个面试问答——终极列表](http://www.importnew.com/11657.html)
-   [Spring总结以及在面试中的一些问题](https://www.cnblogs.com/wang-meng/p/5701982.html)

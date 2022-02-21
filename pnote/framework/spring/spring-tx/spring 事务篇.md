@@ -1,5 +1,55 @@
 # Spring 数据访问篇
 
+Spring 中的 `TransactionDefinition`类里面定义了事务和隔离级别的常量
+
+```java
+package org.springframework.transaction;
+
+import org.springframework.lang.Nullable;
+
+public interface TransactionDefinition {
+   int PROPAGATION_REQUIRED = 0;
+   int PROPAGATION_SUPPORTS = 1;
+   int PROPAGATION_MANDATORY = 2;
+   int PROPAGATION_REQUIRES_NEW = 3;
+   int PROPAGATION_NOT_SUPPORTED = 4;
+   int PROPAGATION_NEVER = 5;
+   int PROPAGATION_NESTED = 6;
+   int ISOLATION_DEFAULT = -1;
+   int ISOLATION_READ_UNCOMMITTED = 1;
+   int ISOLATION_READ_COMMITTED = 2;
+   int ISOLATION_REPEATABLE_READ = 4;
+   int ISOLATION_SERIALIZABLE = 8;
+   int TIMEOUT_DEFAULT = -1;
+
+
+   default int getPropagationBehavior() {
+      return 0;
+   }
+
+   default int getIsolationLevel() {
+      return -1;
+   }
+
+   default int getTimeout() {
+      return -1;
+   }
+
+   default boolean isReadOnly() {
+      return false;
+   }
+
+   @Nullable
+   default String getName() {
+      return null;
+   }
+
+   static TransactionDefinition withDefaults() {
+      return StaticTransactionDefinition.INSTANCE;
+   }
+}
+```
+
 ## Spring 事务的传播属性
 
 所谓 spring 事务的传播属性，就是定义在存在多个事务同时存在的时候，spring 应该如何处理这些事务的行为。这些属性在 TransactionDefinition 中定义，具体常量的解释见下表：
@@ -124,3 +174,17 @@ timeout | 该属性用于设置事务的超时秒数，默认值为-1表示永�
 
 ![Spring事务API架构图](https://gitee.com/cpfree/picture-warehouse/raw/master/pic/20210615191938.png)
 
+## Spring 事务失效场景
+
+首先, Spring 事务是AOP 实现的, 因此, 要想使 Spring 事务有效, 因此AOP 需要有效
+
+1. AOP 失效的场景
+
+   1. Spring AOP 要求被代理方法需要时 public 的.
+
+   2. 
+
+
+## AOP 失效场景
+
+1. 
