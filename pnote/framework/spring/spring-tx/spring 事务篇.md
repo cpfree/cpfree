@@ -173,18 +173,3 @@ timeout | 该属性用于设置事务的超时秒数，默认值为-1表示永�
 ## Spring事务API架构图
 
 ![Spring事务API架构图](https://gitee.com/cpfree/picture-warehouse/raw/master/pic/20210615191938.png)
-
-## Spring 事务失效场景
-
-首先, Spring 事务是AOP 实现的, 因此, 要想使 Spring 事务有效, 因此AOP 需要有效
-
-1. AOP 失效的场景
-
-   1. Spring AOP 要求被代理方法需要时 public 的.
-
-   2. 
-
-
-## AOP 失效场景
-
-1. 

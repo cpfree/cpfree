@@ -1,25 +1,5 @@
 # springFactory
 
-## 容器
-
-- 容器是 spring 的核心，使 IoC 管理所有和组件
-- 在 Spring 中，组件无需自己负责与其他组件的关联。取而代之的是，容器负责把协作组件的引用给予各个组件。创建系统组件之间协作关系的这个动作是 DI 的关键，通常被称之为装配；
-- 容器可以创建组件，装配和配置组件，以及管理他们的整个生命周期（从 new 到 finalize）；
-- **Spring 提供了多种容器实现 **，并分为两类 ：
-      - Bean 工厂（BeanFactory 接口），提供了基础的依赖注入支持。
-      - ApplicationContext 应用上下文
-
-IOC容器就是具有依赖注入功能的容器，IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。应用程序无需直接在代码中new相关的对象，应用程序由IOC容器进行组装。
-
-Spring 的 IoC 容器就是一个实现了 BeanFactory 接口的可实例化类。事实上，Spring 提供了两种不同的容器：一种是最基本的 BeanFactory，另一种是扩展的 ApplicationContext。BeanFactory 仅提供了最基本的依赖注入支持，而 ApplicationContext 则扩展了 BeanFactory , 提供了更多的额外功能。二者对 Bean 的初始化也有很大区别。BeanFactory 当需要调用时读取配置信息，生成某个类的实例。如果读入的 Bean 配置正确，则其他的配置中有错误也不会影响程序的运行。而 ApplicationContext 在初始化时就把 xml 的配置信息读入内存，对 XML 文件进行检验，如果配置文件没有错误，就创建所有的 Bean , 直接为应用程序服务。相对于基本的 BeanFactory，ApplicationContext 唯一的不足是占用内存空间。当应用程序配置 Bean 较多时，程序启动较慢。
-
-ApplicationContext 会利用 Java 反射机制自动识别出配置文件中定义的 BeanPostProcessor、InstantiationAwareBeanPostProcessor 和 BeanFactoryPostProcessor，并自动将它们注册到应用上下文中；而 BeanFactory 需要在代码中通过手工调用 addBeanPostProcessor() 方法进行注册。
-
-Bean 装配实际上就是让容器知道程序中都有哪些 Bean，可以通过以下两种方式实现：
-
-- 配置文件（最为常用，体现了依赖注入 DI 的思想）
-- 编程方式（写的过程中向 BeanFactory 去注册）
-
 ## BeanFactory
 
 ### BeanFactory 简介
@@ -163,34 +143,8 @@ BeanFactory 继承结构图
 </bean>
 ```
 
-1. Properties 配置：使用 <props> 和 < map > 相似，最大区别是 < prop > 的值都是 String
-
-                注意：
-             使用设值注入必须要有 set 方法，通过 name 属性找 set 方法
-
-                优势：a、通过 set() 方法设定更直观，更自然
-                      b、当依赖关系较复杂时，使用 set() 方法更清晰
-             构造子注入：必须要有无参和带参的构造方法，加上 index（值从 0 开始）属性避免注入混淆
-               `<constractor-arg>`
-
-             注意：设值注入可以和构造子注入混合使用。先调用构造方法产生对象，再调用 set() 方法赋值。但只使用设值注入时，会先调用无参的构造方法
-
-             优势：a、依赖关系一次性设定，对外不准修改
-
-                   b、无需关心方式
-                
-                   c、注入有先后顺序，防止注入失败
-
-
-
-
-
-作用：
-
-a. 国际化支持
-b. 资源访问：Resource rs = ctx. getResource("classpath:config.properties"), "file:c:/config.properties"
 c. 事件传递：通过实现 ApplicationContextAware 接口
-3. 常用的获取 ApplicationContext 的方法：
+1. 常用的获取 ApplicationContext 的方法：
    FileSystemXmlApplicationContext：从文件系统或者 url 指定的 xml 配置文件创建，参数为配置文件名或文件名数组
    ClassPathXmlApplicationContext：从 classpath 的 xml 配置文件创建，可以从 jar 包中读取配置文件
    WebApplicationContextUtils：从 web 应用的根目录读取配置文件，需要先在 web.xml 中配置，可以配置监听器或者 servlet 来实现

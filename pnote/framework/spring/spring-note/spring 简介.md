@@ -63,21 +63,18 @@ spring-aspects 模块集成自 AspectJ 框架，主要是为 Spring AOP 提供�
 spring-jdbc 模块是 Spring 提供的 JDBC 抽象框架的主要实现模块，用于简化 Spring JDBC。主要是提供 JDBC 模板方式、关系数据库对象化方式、SimpleJdbc 方式、事务管理来简化 JDBC 编程，主要实现类是 JdbcTemplate、SimpleJdbcTemplate 以及 NamedParameterJdbcTemplate。
 
 spring-tx 模块是 Spring JDBC 事务控制实现模块。使用 Spring 框架，它对事务做了很好的封装，通过它的 AOP 配置，可以灵活的配置在任何一层；但是在很多的需求和应用，直接使用 JDBC 事务控制还是有其优势的。其实，**事务是以业务逻辑为基础的；一个完整的业务应该对应业务层里的一个方法；**如果业务操作失败，则整个事务回滚；所以，事务控制是绝对应该放在业务层的；但是，持久层的设计则应该遵循一个很重要的原则：**保证操作的原子性，即持久层里的每个方法都应该是不可以分割的**。所以，在使用 Spring JDBC 事务控制时，应该注意其特殊性。
+
 spring-orm 模块是 ORM 框架支持模块，主要集成 Hibernate, Java Persistence API (JPA) 和 Java Data Objects (JDO) 用于资源管理、数据访问对象(DAO)的实现和事务策略。
 spring-jms 模块（Java Messaging Service）能够发送和接受信息，自 Spring Framework 4.1以后，他还提供了对 spring-messaging 模块的支撑。
 spring-oxm 模块主要提供一个抽象层以支撑 OXM（OXM 是 Object-to-XML-Mapping 的缩写，它是一个 O/M-mapper，将 java 对象映射成 XML 数据，或者将 XML 数据映射成 java 对象），例如：JAXB, Castor, XMLBeans, JiBX 和 XStream 等。
 
 #### 4. Web
 
-由 spring-web、spring-webmvc、spring-websocket 和 spring-webflux 4 个模块组
-成。
-spring-web 模块为 Spring 提供了最基础 Web 支持，主要建立于核心容器之上，通过 Servlet 或
-者 Listeners 来初始化 IOC 容器，也包含一些与 Web 相关的支持。
-spring-webmvc 模 块 众 所 周 知 是 一 个 的 Web-Servlet 模 块 ， 实 现 了 Spring MVC
-（model-view-Controller）的 Web 应用。
+由 spring-web、spring-webmvc、spring-websocket 和 spring-webflux 4 个模块组成。
+spring-web 模块为 Spring 提供了最基础 Web 支持，主要建立于核心容器之上，通过 Servlet 或者 Listeners 来初始化 IOC 容器，也包含一些与 Web 相关的支持。
+spring-webmvc 模 块 众 所 周 知 是 一 个 的 Web-Servlet 模 块 ， 实 现 了 Spring MVC（model-view-Controller）的 Web 应用。
 spring-websocket 模块主要是与 Web 前端的全双工通讯的协议。（资料缺乏，这是个人理解）
-spring-webflux 是一个新的非堵塞函数式 Reactive Web 框架，可以用来建立异步的，非阻塞，
-事件驱动的服务，并且扩展性非常好。
+spring-webflux 是一个新的非堵塞函数式 Reactive Web 框架，可以用来建立异步的，非阻塞，事件驱动的服务，并且扩展性非常好。
 
 #### 5. 报文发送
 
@@ -134,16 +131,7 @@ spring-test 模块主要为测试提供支持的，毕竟在不需要发布（�
          一个使用实例
          通过spring的IOC功能，在xml配置文件中，给接口的实现类起一个名字"XXX"，代码中创建对象时，使用以下方式创建：
 
-      2. 依赖注入(DI : Dependency Injection)
-         >首先应该明白两个问题：1，谁依赖谁；2，谁注入，注入什么？
-         利用xml的配置信息，在客户端代码中不用具体new任何的java对象了，java对象的创建工作，和对象中元素的赋值工作可以交给xml（spring）处理。
-         回答文中开头两个问题：1.客户端代码中，具体对象的创建依赖于xml文件（spring，即IOC容器）；2.是IOC容器注入，在运行期，根据xml的配置信息，将具体的对象注入到相应的bean中。
-         JavaBean：为了写出方便他人使用的类，于是规定，必须有一个零参的构造函数，同时还要用get/set方法，以便隐藏内部细节，方便使用和之后的代码更新。
-         针对一个JavaBean，为了使用它，首先需要new一个对象，之后需要对其中的set方法进行调用进而赋值。代码之间的联系变得很大，封装的特性渐渐变小。这样在修改代码时，就麻烦了。要成堆的更改，尤其是在不同团队分工开发的过程中，代码变更影响巨大。
-         通过控制反转（IOC）、依赖注入，new的同一种对象，在xml文件中都给他起一个小名，这样更改时只需要在xml文件中，将小名对应的类的具体路径更改了。不需要一个个.java文件替换。
-         在使用set方法传值时，如果针对具体的属性值，进行填写，更改起来也会麻烦一些，通过Spring来进行赋值，更改起来更加方便。
-
-      3. 面向切面AOP
+      2. 面向切面AOP
          可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。
          将日志记录，性能统计，安全控制，事务处理，异常处理等代码从业务逻辑代码中划分出来
 
