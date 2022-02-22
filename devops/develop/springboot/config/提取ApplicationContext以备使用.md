@@ -1,5 +1,13 @@
 # 启动spring时, 保存applicationContext
 
+### 方案一
+
+手动创建ApplicationContext对象, 并保存
+
+### 方案二
+
+建立一个类 AppContext, 存储 ApplicationContext.
+
 ## 代码如下
 
    ```java
