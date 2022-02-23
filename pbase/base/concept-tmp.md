@@ -24,20 +24,7 @@ UTF-8 编码字符理论上可以最多到 6个字节长，但目前全世界的
 ……
 --------------------------------------------
 
-　　模板中的“x”表示字符码。
-　　Ascii码＜007F，编为1个字节的UTF－8码。汉字的 Unicode编码范围为0800－FFFF，所以被编为3个字节的UTF－8码。
-　　例如“汉”字的Unicode编码是6C49，6C49在0800-FFFF之间，所以要用3个字节的模板：1110wwww 10xxxxyy 10yyzzzz。
-
-   6    C    4    9
-0110 1100 0100 1001
-wwww xxxx yyyy zzzz
-    wwww   xxxxyy   yyzzzz
-1110wwww 10xxxxyy 10yyzzzz。
-11100110 10110001 10001001
-   E   6    B   1    8   9
-
-“汉”字的UTF-8编码是E6 B1 89
-
+![](https://gitee.com/cpfree/picture-warehouse/raw/master/pic1/1645588094173.png)
 
 ## http 协议
 
