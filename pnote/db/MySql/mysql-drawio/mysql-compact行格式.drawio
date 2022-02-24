@@ -1,0 +1,98 @@
+<mxfile host="65bd71144e">
+    <diagram id="qjpF-3RerdTAbFdqlexr" name="第 1 页">
+        <mxGraphModel dx="1188" dy="976" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="&lt;span style=&quot;font-size: 18px&quot;&gt;变长字段长度列表&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="258.5" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;fontSize=18;strokeWidth=3;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="450" y="337" as="sourcePoint"/>
+                        <mxPoint x="458" y="453" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="因为3个null值列表&lt;br&gt;因此用8个字节" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="33">
+                    <mxGeometry x="0.1576" y="-1" relative="1" as="geometry">
+                        <mxPoint x="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="&lt;span style=&quot;font-size: 18px&quot;&gt;NULL值列表&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="258.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;span style=&quot;font-size: 18px&quot;&gt;记录头信息&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="258.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;span style=&quot;font-size: 18px&quot;&gt;......&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4F636B;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="258.5" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;span style=&quot;font-size: 18px&quot;&gt;列1的值&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4F636B;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="258.5" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;span style=&quot;font-size: 18px&quot;&gt;列2的值&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4F636B;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="258.5" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;span style=&quot;font-size: 18px&quot;&gt;列n的值&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4F636B;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="870" y="258.5" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;fontSize=18;fillColor=#4F636B;rotation=90;" vertex="1" parent="1">
+                    <mxGeometry x="418.5" y="42" width="20" height="397" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;fontSize=18;fillColor=#4F636B;rotation=90;size=0.475;" vertex="1" parent="1">
+                    <mxGeometry x="781" y="80.5" width="20" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="额外信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="195.5" width="82" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="真实数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="747" y="195.5" width="82" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="COMPACT行格式" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="76" y="268.5" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="若记录中有c1,c2,c4三个可变长字段varchar(10),&lt;br&gt;内容长度分别为1, 3, 4, 则其在内存中存放应该为" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="9" y="559" width="403" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="endArrow=classic;html=1;fontSize=18;strokeWidth=3;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="310" y="339" as="sourcePoint"/>
+                        <mxPoint x="305" y="452" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="倒序存放" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="22">
+                    <mxGeometry x="-0.3596" y="2" relative="1" as="geometry">
+                        <mxPoint y="26" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="若记录中,c1,c3,c4里面是可以存放null值的,&lt;br&gt;其中c1,c4的值为null,则其在内存中存放规则为" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="427" y="562" width="374" height="47" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;span style=&quot;font-size: 18px&quot;&gt;040301&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="478" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;span style=&quot;font-size: 18px&quot;&gt;00000101&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="385" y="478" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;span style=&quot;font-size: 18px&quot;&gt;记录头信息&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="505" y="478" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;span style=&quot;font-size: 18px&quot;&gt;......&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4F636B;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="785" y="478" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;span style=&quot;font-size: 18px&quot;&gt;列1的值&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4F636B;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="625" y="478" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;span style=&quot;font-size: 18px&quot;&gt;列2的值&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4F636B;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="705" y="478" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;span style=&quot;font-size: 18px&quot;&gt;列n的值&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4F636B;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="865" y="478" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="倒序存放" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="450.0010569086252" y="366.9976248796517" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,39 @@
+<!-- docs/_sidebar -->
+
+* [**首页**](/pblog/README)
+* **build**
+   * [maven-command](/platform/build/maven-command.md)
+   * [maven-pom-attribute.copy](/platform/build/maven-pom-attribute.copy.md)
+   * [maven-repository](/platform/build/maven-repository.md)
+* **linux**
+   * [fileRelational](/platform/linux/fileRelational.md)
+   * [linux struct](/platform/linux/linux struct.md)
+   * [linux-yum](/platform/linux/linux-yum.md)
+   * [linux云配置](/platform/linux/linux云配置.md)
+   * [linux误删文件恢复](/platform/linux/linux误删文件恢复.md)
+   * [questions](/platform/linux/questions.md)
+   * [systemCommandRelation](/platform/linux/systemCommandRelation.md)
+   * [tip-linux](/platform/linux/tip-linux.md)
+   * [VMware使用相关](/platform/linux/VMware使用相关.md)
+   * [防火墙](/platform/linux/防火墙.md)
+   * **linux-command**
+      * [command-user](/platform/linux/linux-command/command-user.md)
+      * [linux-command-directory](/platform/linux/linux-command/linux-command-directory.md)
+      * [linux-command-path](/platform/linux/linux-command/linux-command-path.md)
+      * [linux-command-run](/platform/linux/linux-command/linux-command-run.md)
+      * [linux-command-system](/platform/linux/linux-command/linux-command-system.md)
+   * **linux-config**
+      * [linux-config-user](/platform/linux/linux-config/linux-config-user.md)
+      * [linux-network-firewall](/platform/linux/linux-config/linux-network-firewall.md)
+      * [挂载磁盘](/platform/linux/linux-config/挂载磁盘.md)
+   * **linux-func**
+      * [linux-func-crontab](/platform/linux/linux-func/linux-func-crontab.md)
+* **git**
+   * [git-ops](/platform/ops/git-ops.md)
+   * [git-branch](/platform/vcs/git-branch.md)
+   * [git-command](/platform/vcs/git-command.md)
+   * [git-file-status](/platform/vcs/git-file-status.md)
+   * [git-operate](/platform/vcs/git-operate.md)
+   * [git-project](/platform/vcs/git-project.md)
+* **theory**
+   * [docker-theory](/platform/theory/docker-theory.md)

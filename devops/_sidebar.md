@@ -2,16 +2,34 @@
 
 * [**首页**](/devops/README)
 * **开发**
+   * **note**
+      * [docker-cmd](/devops/api/cmd/docker-cmd.md)
+      * [nacos-cmd](/devops/api/cmd/nacos-cmd.md)
+      * [项目优雅停止](/devops/develop/common/项目优雅停止.md)
+      * [项目幂等性设计](/devops/develop/common/项目幂等性设计.md)
+      * [X-Frame-Options](/devops/develop/http/X-Frame-Options.md)
+      * [tomcat](/devops/optration/deploy/tomcat.md)
+      * [springMVC 文件上传](/develop/note/springMVC-文件上传.md)
+      * [数据获取方案](/devops/develop/note/数据获取方案.md)
    * **集成框架**
-      * shiro
-         * [spring-shiro自动装配](/devops/develop/frame/shiro/spring-shiro自动装配.md)
-         * [springboot集成shiro](/devops/develop/frame/shiro/springboot集成shiro.md)
+      * [spring-shiro自动装配](/devops/develop/frame/shiro/spring-shiro自动装配.md)
+      * [springboot集成shiro](/devops/develop/frame/shiro/springboot集成shiro.md)
+      * [spring-security-配置](/devops/develop/frame/spring-security/spring-security-配置.md)
+      * [dubbo-usage](/devops/develop/frame/dubbo-usage.md)
+   * **spring-config**
+      * [AOP打印controller参数与返回值信息](/devops/develop/springboot/config/AOP打印controller参数与返回值信息.md)
+      * [SpringBoot热部署](/devops/develop/springboot/config/SpringBoot热部署.md)
+      * [springboot父子模块配置文件加载方案](/devops/develop/springboot/config/springboot父子模块配置文件加载方案.md)
+      * [spring搭建多环境配置文件](/devops/develop/springboot/config/spring搭建多环境配置文件.md)
+      * [spring配置Converter,Formatter](/devops/develop/springboot/config/spring配置Converter,Formatter.md)
+      * [启动后自动用浏览器打开项目](/devops/develop/springboot/config/启动后自动用浏览器打开项目.md)
+      * [提取ApplicationContext以备使用](/devops/develop/springboot/config/提取ApplicationContext以备使用.md)
+      * [统一处理全局异常](/devops/develop/springboot/config/统一处理全局异常.md)
+      * [静态资源路径配置的两种方法](/devops/develop/springboot/config/静态资源路径配置的两种方法.md)
+      * [ApplicationRunner&CommandLineRunner](/devops/develop/springboot/interface/ApplicationRunner&CommandLineRunner.md)
    * **springboot**
       * [1-spring项目搭建](/devops/develop/springboot/1-spring项目搭建.md)
       * [2-引入mybatis-plus](/devops/develop/springboot/2-引入mybatis-plus.md)
-      * [SpringBoot热部署](/devops/develop/springboot/config/SpringBoot热部署.md)
-      * [spring搭建多环境配置文件](/devops/develop/springboot/config/spring搭建多环境配置文件.md)
-      * [静态资源路径配置的两种方法](/devops/develop/springboot/config/静态资源路径配置的两种方法.md)
    * **springcloud**
       * [1-引入包-springcloud-alibaba](/devops/develop/springcloud/1-引入包-springcloud-alibaba.md)
       * [10-单点登录](/devops/develop/springcloud/10-单点登录.md)
@@ -27,6 +45,7 @@
       * [7-gateway网关模块使用sentinel限流](/devops/develop/springcloud/7-gateway网关模块使用sentinel限流.md)
       * [7.1-sentinel-gateway模块限流](/devops/develop/springcloud/7.1-sentinel-gateway模块限流.md)
       * [7.2-sentinel非网关模块服务限流](/devops/develop/springcloud/7.2-sentinel非网关模块服务限流.md)
+      * [单点登录前端设计](/devops/develop/springcloud/单点登录前端设计.md)
 * **运维**
    * **安装**
       * [docker-image-config](/devops/optration/install/docker-image-config.md)
@@ -41,18 +60,39 @@
       * [maven-install](/devops/optration/install/maven-install.md)
       * [mysql-install](/devops/optration/install/mysql-install.md)
       * [nacos-install](/devops/optration/install/nacos-install.md)
-      * [nginx-icur](/devops/optration/nginx-icur.md)
+      * [nginx-icur](/devops/optration/install/nginx-icur.md)
       * [node-install](/devops/optration/install/node-install.md)
       * [other-plugin-install](/devops/optration/install/other-plugin-install.md)
       * [rabbitMq-install](/devops/optration/install/rabbitMq-install.md)
       * [readme](/devops/optration/install/readme.md)
       * [redis-install](/devops/optration/install/redis-install.md)
+      * [rocket-install](/devops/optration/install/rocket-install.md)
       * [rocketMq-install](/devops/optration/install/rocketMq-install.md)
       * [sentinel-install](/devops/optration/install/sentinel-install.md)
       * [zookeeper-install](/devops/optration/install/zookeeper-install.md)
    * **部署**
       * [docker构建镜像](/devops/optration/docker构建镜像.md)
-   * **软件工程**
+* **软件工具**
+   * **trouble**
+      * [IDEA](/devops/optration/trouble/soft-trouble/IDEA.md)
+      * [maven-相关](/devops/optration/trouble/soft-trouble/maven-相关.md)
+      * [maven仓库更新失败](/devops/optration/trouble/soft-trouble/maven仓库更新失败.md)
+      * [pqa-git](/devops/optration/trouble/soft-trouble/pqa-git.md)
+   * **/devops/optration/troubleshoot**
+      * [JVM排查](/devops/optration/troubleshoot/JVM排查.md)
+      * [查找哪个线程或进程CPU利用率较高](/devops/optration/troubleshoot/查找哪个线程或进程CPU利用率较高.md)
+   * **/devops/platform/ide**
+      * [idea-config](/devops/platform/ide/idea-config.md)
+      * [idea-problem](/devops/platform/ide/idea-problem.md)
+      * [vscode-config](/devops/platform/ide/vscode-config.md)
+   * **/devops/platform/soft**
+      * [beyond-compare](/devops/platform/soft/beyond-compare.md)
+      * [office365自定义安装](/devops/platform/soft/office365自定义安装.md)
+      * [picgo](/devops/platform/soft/picgo.md)
+      * [secureCrt](/devops/platform/soft/secureCrt.md)
+      * [vscode-config-snippets](/devops/platform/soft/vscode-config-snippets.md)
+* **软件工程**
+      * [代码测试相关概念](/devops/software-engineering/代码测试相关概念.md)
       * [发布类型](/devops/software-engineering/发布类型.md)
       * [敏捷开发](/devops/software-engineering/敏捷开发.md)
       * [数据管理](/devops/software-engineering/数据管理.md)
@@ -60,5 +100,4 @@
       * [软件开发模型](/devops/software-engineering/软件开发模型.md)
       * [软件生命周期](/devops/software-engineering/软件生命周期.md)
       * [项目需求变更](/devops/software-engineering/项目需求变更.md)
-   * **团队**
       * [产品经理和开发人员矛盾](/devops/team/产品经理和开发人员.md)

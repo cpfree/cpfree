@@ -1,0 +1,83 @@
+<!-- docs/_sidebar -->
+
+* [**首页**](/pblog/README)
+* **开源作品**
+   * **cosycode**
+      * [CtrlLoopThreadComp](/pblog/design-code/cosycode/CtrlLoopThreadComp.md)
+      * [singleton](/pblog/design-code/cosycode/singleton.blog.md)
+      * [Throws](/pblog/design-code/分享两个项目中不让用但在私下用的很爽的异常处理方式.design.md)
+   * **数据字典**
+      * [巧用枚举类管理字典表](/pblog/design-code/code-dict/巧用枚举类管理字典表.blog.md)
+   * **bit-data-map**
+      * [binary-data-map](/pblog/design-code/bit-data-map/binary-data-map.blog.md)
+      * [endpoint-io-transfer](/pblog/design-code/bit-data-map/endpoint-io-transfer.blog.md)
+      * [云桌面数据传输](/pblog/design-code/bit-data-map/如何在没有复制权限的情况下,把Citrix下载到本地电脑.blog.md)
+   * **闭包代理**
+      * [闭包代理模式-初创篇](/pblog/design-code/closure-proxy/闭包代理模式-初创篇.blog.md)
+      * [闭包代理模式-集成篇](/pblog/design-code/closure-proxy/闭包代理模式-集成篇.blog.md)
+      * [闭包代理模式](/pblog/design-code/closure-proxy/闭包代理模式.blog.md)
+   * **脚本插件**
+      * [百度搜索结果过滤脚本](/pblog/design-code/百度搜索结果过滤脚本.md)
+      * [game-chess-ai](/pblog/project/game-chess-ai.md)
+* **设计**
+   * **账号**
+      * [credentials&token&ticket](/pblog/design-frame/account/credentials&token&ticket.md)
+      * [jwt](/pblog/design-frame/account/jwt.md)
+      * [单点登录](/pblog/design-frame/account/单点登录.md)
+      * [单点登录和统一认证平台.copy](/pblog/design-frame/account/单点登录和统一认证平台.copy.md)
+      * [单点登录解决方案](/pblog/design-frame/account/单点登录解决方案.md)
+      * [认证和授权](/pblog/design-frame/account/认证和授权.md)
+      * [跨域的解决方式](/pblog/design-frame/account/跨域的解决方式.md)
+   * **数据库**
+      * [文件表设计.blog](/pblog/design-frame/db-design/文件表设计.blog.md)
+      * [权限框架表设计.blog](/pblog/design-frame/db-design/权限框架表设计.blog.md)
+   * **运维环境**
+      * [运维环境设计](/pblog/design-frame/options/运维环境设计.md)
+   * **系统设计**
+      * [分布式架构系统生成全局唯一序列号](/pblog/design-frame/system/分布式架构系统生成全局唯一序列号.md)
+      * [返回码设计](/pblog/design-frame/system/返回码设计.md)
+* **开发经验**
+   * [Mysql索引归约](/pblog/exp-dev/Mysql索引归约.md)
+   * [spring配置规范](/pblog/exp-dev/spring配置规范.md)
+   * [一个数据源](/pblog/exp-dev/一个数据源.md)
+   * [一件事情引起的规范](/pblog/exp-dev/一件事情引起的规范.md)
+   * [代码写法总结](/pblog/exp-dev/代码写法总结.md)
+   * [关于编程中函数和方法的一些感悟](/pblog/exp-dev/关于编程中函数和方法的一些感悟.md)
+   * [对象的生命周期.trim](/pblog/exp-dev/对象的生命周期.trim.md)
+   * [设计思想总结](/pblog/exp-dev/设计思想总结.md)
+   * [设计思想.copy](/pblog/norm/设计思想.copy.md)
+   * [项目编程规划设计注意事项](/pblog/exp-dev/项目编程规划设计注意事项.md)
+   * [版本号命名规范.turn](/pblog/norm/版本号命名规范.turn.md)
+* **配置研究**
+   * [gpg密钥配置](/pblog/note-config/gpg密钥配置.md)
+   * [mybatis双数据源](/pblog/note-config/mybatis双数据源.md)
+   * [ssh密钥配置](/pblog/note-config/ssh密钥配置.md)
+   * **日志配置**
+      * [IDEA控制台乱码原理性深入研究分析与解决方案](/pblog/note-config/log/IDEA控制台乱码原理性深入研究分析与解决方案.md)
+      * [IDEA控制台乱码解决方案](/pblog/note-config/log/IDEA控制台乱码解决方案.md)
+      * [IDEA日志乱码-研究篇](/pblog/note-config/log/IDEA日志乱码-研究篇.md)
+      * [IDE开发乱码问题](/pblog/note-config/log/IDE开发乱码问题.md)
+      * [乱码统一解决方案,愿世界没有乱码](/pblog/note-config/log/乱码统一解决方案,愿世界没有乱码.md)
+      * [日志大小设置为多大为宜](/pblog/note-devops/日志大小设置为多大为宜.md)
+   * **开发笔记**
+      * [jar&源代码比对方案](/pblog/note-devops/jar&源代码比对方案.md)
+      * [Mysql5.7升级至8版本流程及事项.blog](/pblog/note-devops/Mysql5.7升级至8版本流程及事项.blog.md)
+      * [将Mysql中的为空的字段全部置为EMPTY_STRING](/pblog/note-devops/将Mysql中的为空的字段全部置为EMPTY_STRING.md)
+      * [批量测试IP和端口号是否连通](/pblog/note-devops/批量测试IP和端口号是否连通.md)
+   * **捣鼓笔迹**
+      * [window-command-mklink](/pblog/note-it/window-command-mklink.md)
+      * [低代码实现window右键文件创建符号链接](/pblog/note-it/低代码实现window右键文件创建符号链接.md)
+      * [各系统运行环境之间的不同之处](/pblog/note-it/各系统运行环境之间的不同之处.md)
+      * [将jar上传至maven仓库.turn](/pblog/note-it/将jar上传至maven仓库.turn.md)
+      * [本地Host文件解析域名后访问阿里云服务器,结果请求被拦截,提示备案问题的解决方式](/pblog/note-it/本地Host文件解析域名后访问阿里云服务器,结果请求被拦截,提示备案问题的解决方式.md)
+      * [第九届中国软件杯大学生赛题](/pblog/note-it/第九届中国软件杯大学生赛题.md)
+   * **skill**
+      - [WebService-入门超详细实例.copy](/pblog/skill/WebService-入门超详细实例.copy.md)
+      - [连接的本质.todo](/pblog/skill/连接的本质.todo.md)
+      - [零拷贝原理及 java 实现.turn](/pblog/skill/零拷贝原理及java实现.turn.md)
+   * **临时笔记**
+      * [tip-dubbo&zookeeper](/pblog/tip/tip-dubbo&zookeeper.md)
+      * [tip-linux](/pblog/tip/tip-linux.md)
+      * [tip-mysql](/pblog/tip/tip-mysql.md)
+      * [tip](/pblog/tip/tip.md)
+      * [tmp](/pblog/tip/tmp.md)

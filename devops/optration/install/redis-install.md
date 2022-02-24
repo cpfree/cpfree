@@ -60,3 +60,14 @@ id: 220100-100033
    # 无日志 绝对路径 启动
    > nohup /.../redis-6.2.5/src/redis-server /.../redis-6.2.5/redis.conf > /dev/null 2>&1 &
    ```
+
+## redis 客户端连接
+
+1. 启动客户端
+   `redis-cli -h host -p port -a password`
+2. 验证是否redis服务启动
+
+   ```shell
+   redis 127.0.0.1:6379> PING
+   PONG
+   ```

@@ -1,0 +1,30 @@
+<!-- docs/_sidebar -->
+
+* [**模块首页**](/architecture/README)
+* **架构基础**
+   * [0架构-基本概念](/architecture/base/0架构-基本概念.md)
+   * [serverless](/architecture/base/serverless.md)
+   * [service-mesh](/architecture/base/service-mesh.md)
+   * [架构演进.turn](/architecture/base/架构演进.turn.md)
+* **集群**
+   * [mysql-cluster](/architecture/cluster/mysql-cluster.md)
+   * [redis-cluster](/architecture/cluster/redis-cluster.md)
+   * [数据库读写和集群分析](/architecture/cluster/数据库读写和集群分析.md)
+   * [集群杂谈](/architecture/cluster/集群杂谈.md)
+* **概念**
+   * [基本概念](/architecture/concept/基本概念.md)
+* **分布式**
+   * [二阶段提交](/architecture/distributed/二阶段提交.md)
+   * [分布式漫谈](/architecture/distributed/分布式漫谈.md)
+   * [分布式相关问题](/architecture/distributed/分布式相关问题.md)
+   * [分布式知识体系](/architecture/distributed/分布式知识体系.md)
+   * [微服务下的分布式服务设计](/architecture/distributed/微服务下的分布式服务设计.md)
+* **高并发**
+   * [并发环境下,先操作数据库还是先操作缓存.copy](/architecture/high-concurrency/并发环境下,先操作数据库还是先操作缓存.copy.md)
+   * [高可用架构之无状态服务](/architecture/high-concurrency/高可用架构之无状态服务.md)
+   * [高并发架构会有哪些问题](/architecture/high-concurrency/高并发架构会有哪些问题.md)
+* **微服务**
+   * [服务治理](/architecture/microservices/服务治理.md)
+   * [服务注册与发现](/architecture/microservices/服务注册与发现.md)
+   * [负载均衡技术](/architecture/microservices/负载均衡技术.md)
+   * [负载均衡算法](/architecture/microservices/负载均衡算法.md)
