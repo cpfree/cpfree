@@ -2,21 +2,21 @@
 /* ================================================
    Global site tag (gtag.js) - Google Analytics  
 ================================================ */
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-SNGE4TXFRV');
+// window.dataLayer = window.dataLayer || [];
+// function gtag(){dataLayer.push(arguments);}
+// gtag('js', new Date());
+// gtag('config', 'G-SNGE4TXFRV');
 
 /* ================================================
    百度访问量统计
 ================================================ */
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?a9a2284c332611280a6ea5793a0bf60a";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+// var _hmt = _hmt || [];
+// (function() {
+//   var hm = document.createElement("script");
+//   hm.src = "https://hm.baidu.com/hm.js?a9a2284c332611280a6ea5793a0bf60a";
+//   var s = document.getElementsByTagName("script")[0]; 
+//   s.parentNode.insertBefore(hm, s);
+// })();
 
 /* ================================================
    页面信息, 从markdown文件中提取, 提取文件头部
@@ -134,16 +134,6 @@ const gitalk = new Gitalk({
    // facebook-like distraction free mode
    distractionFreeMode: false
 })
-
-// const gitalk = new Gitalk({
-//    clientID: 'faff8cd89408b43aacc0',
-//    clientSecret: 'ef8cdceb9d95fb2e48464c2cba8bc2a00120ef91',
-//    repo: 'comment-test', // 仓库名字
-//    owner: 'helowcode', // github名字
-//    admin: ['cpfree'], // 使用人or管理员
-//    // facebook-like distraction free mode
-//    distractionFreeMode: false
-// })
 
 // 获取 gitalk 的 title 和 id
 function calcGitalkIdAndTitle () {
