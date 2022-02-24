@@ -12,9 +12,8 @@
    <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
    <!-- 引入 css -->
-   <!-- <link rel="stylesheet" type="text/css" href="static/css/theme-simple.css"> -->
-   <link rel="stylesheet" type="text/css" href="static/docsify/css/vue.css">
-
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+   <!-- <link rel="stylesheet" type="text/css" href="static/docsify/css/vue.css"> -->
    <!-- font-awesome -->
    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
    <!-- gitalk 评论系统 -->
@@ -98,6 +97,9 @@
          topMargin: 140,
          // 加载 _sidebar.md
          loadSidebar: true, // 设置侧边栏
+         alias: {// 取消嵌套的侧边栏, 页面加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录
+            '/.*/_navbar.md': '/_navbar.md'
+         },
          subMaxLevel: 3, // 侧边栏显示当前页面的目录(标题)
          externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
 
@@ -122,11 +124,6 @@
          remoteMarkdown: {
             tag: 'remoteMarkdownUrl',
          },
-
-         alias: {// 取消嵌套的侧边栏, 页面加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录
-            '/.*/_navbar.md': '/_navbar.md'
-         },
-
          // markdown 渲染
          plugins: [
             EditOnGithubPlugin.create(
@@ -160,6 +157,10 @@
                   var headContent = ''; // headInfo.renderHtml(); 
                   var mdContent = content.substring(end + 5).trim();
                   return headContent + '\n\n' + mdContent;
+               });
+               hook.mounted(function() {
+                  // 初始化并第一次加载完成数据后调用，只触发一次，没有参数。
+                  console.log('hook.mounted end')
                });
             }
          ],
@@ -207,7 +208,7 @@
    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-go.min.js"></script>
 
    <!-- 谷歌统计 - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNGE4TXFRV"></script>
+   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNGE4TXFRV"></script> -->
 
    <!-- 置顶插件 -->
    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

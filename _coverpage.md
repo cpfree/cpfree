@@ -16,9 +16,7 @@
 <br/>
 
 <!-- 下面的标签连接不能有空行 -->
-[<span style="font-size:24px">Github</span>](https://github.com/cpfree/)
 [<span style="font-size:24px">Gitee</span>](https://gitee.com/cpfree/)
 [<span style="font-size:24px">CSDN</span>](https://blog.csdn.net/u011511756/)
-
 [<span style="font-size:24px">人生经验</span>](https://cpfree.gitee.io/life-exp/)
 [<span style="font-size:24px">IT博客</span>](README.md)
