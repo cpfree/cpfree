@@ -76,26 +76,26 @@
       * [maven-相关](/devops/optration/trouble/soft-trouble/maven-相关.md)
       * [maven仓库更新失败](/devops/optration/trouble/soft-trouble/maven仓库更新失败.md)
       * [pqa-git](/devops/optration/trouble/soft-trouble/pqa-git.md)
-   * **/devops/optration/troubleshoot**
+   * **问题排查**
       * [JVM排查](/devops/optration/troubleshoot/JVM排查.md)
       * [查找哪个线程或进程CPU利用率较高](/devops/optration/troubleshoot/查找哪个线程或进程CPU利用率较高.md)
-   * **/devops/platform/ide**
+   * **ide**
       * [idea-config](/devops/platform/ide/idea-config.md)
       * [idea-problem](/devops/platform/ide/idea-problem.md)
       * [vscode-config](/devops/platform/ide/vscode-config.md)
-   * **/devops/platform/soft**
+   * **soft**
       * [beyond-compare](/devops/platform/soft/beyond-compare.md)
       * [office365自定义安装](/devops/platform/soft/office365自定义安装.md)
       * [picgo](/devops/platform/soft/picgo.md)
       * [secureCrt](/devops/platform/soft/secureCrt.md)
       * [vscode-config-snippets](/devops/platform/soft/vscode-config-snippets.md)
 * **软件工程**
-      * [代码测试相关概念](/devops/software-engineering/代码测试相关概念.md)
-      * [发布类型](/devops/software-engineering/发布类型.md)
-      * [敏捷开发](/devops/software-engineering/敏捷开发.md)
-      * [数据管理](/devops/software-engineering/数据管理.md)
-      * [软件工程](/devops/software-engineering/软件工程.md)
-      * [软件开发模型](/devops/software-engineering/软件开发模型.md)
-      * [软件生命周期](/devops/software-engineering/软件生命周期.md)
-      * [项目需求变更](/devops/software-engineering/项目需求变更.md)
-      * [产品经理和开发人员矛盾](/devops/team/产品经理和开发人员.md)
+   * [代码测试相关概念](/devops/software-engineering/代码测试相关概念.md)
+   * [发布类型](/devops/software-engineering/发布类型.md)
+   * [敏捷开发](/devops/software-engineering/敏捷开发.md)
+   * [数据管理](/devops/software-engineering/数据管理.md)
+   * [软件工程](/devops/software-engineering/软件工程.md)
+   * [软件开发模型](/devops/software-engineering/软件开发模型.md)
+   * [软件生命周期](/devops/software-engineering/软件生命周期.md)
+   * [项目需求变更](/devops/software-engineering/项目需求变更.md)
+   * [产品经理和开发人员矛盾](/devops/team/产品经理和开发人员.md)
