@@ -41,3 +41,12 @@
 这里几乎所有文档都是以markdown文件形式存在,
 
 ❌ | ✅
+
+#### ◼️博客导航
+
+* [**架构模块**](/architecture/README)
+* [**devops**](/devops/README)
+* [**编程基础**](/pbase/README)
+* [**博客笔迹**](/pblog/README)
+* [**编程笔迹**](/pnote/README)
+* [**系统平台**](/platform/README)

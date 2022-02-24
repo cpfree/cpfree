@@ -1,13 +1,13 @@
 <!-- docs/_sidebar -->
+* [**模块首页**](/platform/README)
 
-* [**首页**](/pblog/README)
 * **build**
    * [maven-command](/platform/build/maven-command.md)
    * [maven-pom-attribute.copy](/platform/build/maven-pom-attribute.copy.md)
    * [maven-repository](/platform/build/maven-repository.md)
 * **linux**
    * [fileRelational](/platform/linux/fileRelational.md)
-   * [linux struct](/platform/linux/linux struct.md)
+   * [linux struct](/platform/linux/linux-struct.md)
    * [linux-yum](/platform/linux/linux-yum.md)
    * [linux云配置](/platform/linux/linux云配置.md)
    * [linux误删文件恢复](/platform/linux/linux误删文件恢复.md)

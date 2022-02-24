@@ -1,6 +1,5 @@
 <!-- docs/_sidebar -->
-
-* [**首页**](/devops/README)
+* [**模块首页**](/pbase/README)
 
 * **基础**
    * **概念**
@@ -25,7 +24,7 @@
       * [排序算法](/pbase/arithmetic/modal/排序算法.md)
       * [文件排序](/pbase/arithmetic/modal/文件排序.md)
       * [随机打乱数组](/pbase/arithmetic/modal/随机打乱数组.md)
-      * [prime](/pbase/arithmetic/special number/prime.md)
+      * [prime](/pbase/arithmetic/modal/prime.md)
    * **逻辑算法**
       * [redis-hash槽](/pbase/logic-arthimetic/redis-hash槽.md)
       * [一致性哈希算法](/pbase/logic-arthimetic/一致性哈希算法.md)
@@ -51,9 +50,7 @@
    * [HTTP状态码](/pbase/network/HTTP状态码.md)
    * [http请求以及请求方法之间的区别](/pbase/network/http请求以及请求方法之间的区别.md)
    * [中介&正向代理&反向代理](/pbase/network/中介&正向代理&反向代理.md)
-   * [流量整形](/pbase/network/流量整形.md)
    * [网络传输](/pbase/network/网络传输.md)
-   * [连接的本职](/pbase/network/TCP/IP详解/连接的本职.md)
    * [cookie&sessioon](/pbase/tcp&ip/http/cookie&sessioon.md)
    * [http](/pbase/tcp&ip/http/http.md)
    * [localstorage&sessionstorage](/pbase/tcp&ip/http/localstorage&sessionstorage.md)

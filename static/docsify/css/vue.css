@@ -554,7 +554,7 @@ section.cover ul {
   max-width: 500px;
   padding: 0;
 }
-section.cover .cover-main > p:last-child a {
+section.cover .cover-main > p a {
   border-color: var(--theme-color, #42b983);
   border-radius: 2rem;
   border-style: solid;
@@ -574,11 +574,11 @@ section.cover .cover-main > p:last-child a:last-child {
   color: #fff;
 }
 section.cover .cover-main > p:last-child a:last-child:hover {
-  color: inherit;
+  color: orange;
   opacity: 0.8;
 }
-section.cover .cover-main > p:last-child a:hover {
-  color: inherit;
+section.cover .cover-main > p a:hover {
+   color: orange;
 }
 section.cover blockquote > p > a {
   border-bottom: 2px solid var(--theme-color, #42b983);

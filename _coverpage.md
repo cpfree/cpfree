@@ -3,8 +3,7 @@
 
 <img src="/static/img/profile-picture.png" style="border-radius:30%; opacity: 1;" />
 
-
-> <span style="font-size:30px">个人博客</span>
+> <span style="font-size:30px">IT博客</span>
 
 - <span style="font-size:20px">以我为主,为我所用; 如无必要,勿增实体!</span>
 - <span style="font-size:20px">稳扎稳打,实事求是; 长远视界,三思后行!</span>
@@ -20,4 +19,6 @@
 [<span style="font-size:24px">Github</span>](https://github.com/cpfree/)
 [<span style="font-size:24px">Gitee</span>](https://gitee.com/cpfree/)
 [<span style="font-size:24px">CSDN</span>](https://blog.csdn.net/u011511756/)
-[<span style="font-size:24px">进入Blog</span>](README.md)
+
+[<span style="font-size:24px">人生经验</span>](https://cpfree.gitee.io/life-exp/)
+[<span style="font-size:24px">IT博客</span>](README.md)

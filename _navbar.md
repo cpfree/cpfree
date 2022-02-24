@@ -7,6 +7,7 @@
    * [**博客笔迹**](/pblog/README)
    * [**编程笔迹**](/pnote/README)
    * [**系统平台**](/platform/README)
-* ️️◼️其它栏目
-   * [2048](/static/html/game/game2048)
-   * [五子棋](/static/html/game/gobang)
+* ◼️博客导航
+   * [**人生经验**](https://cpfree.gitee.io/life-exp/)
+   * [**博客封面**](/)
+   * [**博客首页**](/README)

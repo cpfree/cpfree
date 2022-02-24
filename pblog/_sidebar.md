@@ -1,6 +1,6 @@
 <!-- docs/_sidebar -->
+* [**模块首页**](/pblog/README)
 
-* [**首页**](/pblog/README)
 * **开源作品**
    * **cosycode**
       * [CtrlLoopThreadComp](/pblog/design-code/cosycode/CtrlLoopThreadComp.md)
@@ -49,9 +49,7 @@
    * [项目编程规划设计注意事项](/pblog/exp-dev/项目编程规划设计注意事项.md)
    * [版本号命名规范.turn](/pblog/norm/版本号命名规范.turn.md)
 * **配置研究**
-   * [gpg密钥配置](/pblog/note-config/gpg密钥配置.md)
    * [mybatis双数据源](/pblog/note-config/mybatis双数据源.md)
-   * [ssh密钥配置](/pblog/note-config/ssh密钥配置.md)
    * **日志配置**
       * [IDEA控制台乱码原理性深入研究分析与解决方案](/pblog/note-config/log/IDEA控制台乱码原理性深入研究分析与解决方案.md)
       * [IDEA控制台乱码解决方案](/pblog/note-config/log/IDEA控制台乱码解决方案.md)

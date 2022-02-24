@@ -1,6 +1,6 @@
 <!-- docs/_sidebar -->
-
 * [**模块首页**](/architecture/README)
+
 * **架构基础**
    * [0架构-基本概念](/architecture/base/0架构-基本概念.md)
    * [serverless](/architecture/base/serverless.md)
@@ -21,7 +21,6 @@
    * [微服务下的分布式服务设计](/architecture/distributed/微服务下的分布式服务设计.md)
 * **高并发**
    * [并发环境下,先操作数据库还是先操作缓存.copy](/architecture/high-concurrency/并发环境下,先操作数据库还是先操作缓存.copy.md)
-   * [高可用架构之无状态服务](/architecture/high-concurrency/高可用架构之无状态服务.md)
    * [高并发架构会有哪些问题](/architecture/high-concurrency/高并发架构会有哪些问题.md)
 * **微服务**
    * [服务治理](/architecture/microservices/服务治理.md)

@@ -8,7 +8,8 @@
 
   /* 特定组件 */
   --nav-color: var(--back-color);
-  --nav-text-hover-color: #ffa724;
+  --nav-hover-color: #ffa724;
+  --nav-active-color: #bdf;
   --nav-background: #525252;
   --nav-item-background: #525252;
   --markdown-background: #f7f7f7;
@@ -50,54 +51,30 @@ body {
   background: var(--title-color);
 }
 
+.sidebar-nav > ul > li > p {
+   background: var(--title-color);
+   padding-left: 5px;
+}
+
 /* 优化导航栏 */
+
+/* 导航栏编程二维竖排 */
+
 .app-nav a:hover {
-  color: var(--nav-text-hover-color);
+  color: var(--nav-hover-color);
 }
 
-.app-nav > li > ul > li {
-  margin: 10px 0;
-  margin-right: 16px;
-}
-
-.app-nav > ul > li > ul > li {
-  padding: 10px;
-  margin: 0;
-}
-
-.app-nav > ul > li > ul > li:hover {
-  background: var(--nav-item-background);
+.app-nav a.active {
+   color: var(--nav-active-color);
 }
 
 .app-nav > ul > li:hover > ul {
   min-width: 100px;
-  display: flex;
+  /* 导航栏编程二维竖排显示 */
+  /* display: flex; */
   padding: 10px;
   color: var(--nav-color);
   background: var(--nav-background);
-}
-
-.app-nav li:hover > ul {
-  overflow: visible;
-}
-
-.app-nav li:hover > ul > li {
-  border-radius: 4px;
-}
-
-.app-nav li:hover > ul > li > ul {
-  background: transparent;
-}
-
-.app-nav > ul > li > ul > li > ul {
-  overflow: visible;
-  position: initial;
-  border: none;
-}
-
-.app-nav > ul > li > ul > li > ul > li {
-  margin: 0;
-  margin-bottom: 4px;
 }
 
 /* ==========================

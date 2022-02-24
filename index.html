@@ -86,10 +86,10 @@
       
       window.$docsify = {
          el: '#app',
-         name: '个人编程博客',
-         nameLink: '/',
-         repo: 'https://gitee.com/cpfree',
-         logo: '',
+         // name: '封面页',
+         // nameLink: '/',
+         // logo: '/static/img/profile-picture.png',
+         repo: 'https://gitee.com/cpfree/cpfree',
          themeColor: '#428',
          loadNavbar: true, // 设置侧边栏
          auto2top: true,
@@ -156,7 +156,10 @@
                   var headStr = content.substring(4, end).trim();
                   headInfo.parse(headStr);
                   
-                  return headInfo.renderHtml() + content.substring(end + 5)
+                  // 关闭渲染
+                  var headContent = ''; // headInfo.renderHtml(); 
+                  var mdContent = content.substring(end + 5).trim();
+                  return headContent + '\n\n' + mdContent;
                });
             }
          ],

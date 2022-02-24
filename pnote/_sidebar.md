@@ -1,11 +1,9 @@
 <!-- docs/_sidebar -->
+* [**模块首页**](/pnote/README)
 
-* [**首页**](/pblog/README)
 * **DB**
    * [事务相关](/pnote/db/common/事务相关.md)
-   * [历史数据迁移方案](/pnote/db/common/历史数据迁移方案.md)
    * [存储引擎](/pnote/db/common/存储引擎.md)
-   * [存储数据结构](/pnote/db/common/存储数据结构.md)
    * [数据库设计](/pnote/db/common/数据库设计.md)
    * [索引](/pnote/db/common/索引.md)
    * [db-problem-scenario](/pnote/db/db-problem-scenario.md)
@@ -75,7 +73,6 @@
       * [quartz-summary](/pnote/framework/quartz/quartz-summary.md)
       * [shiro](/pnote/framework/shiro/shiro.md)
       * [shiro-认证流程](/pnote/framework/shiro/shiro-认证流程.md)
-      * [tip](/pnote/framework/shiro/tip.md)
 * **spring**
    * **ioc**
       * [IOC容器初始化](/pnote/framework/spring/ioc/IOC容器初始化.md)
@@ -145,7 +142,6 @@
       * [java四大特性](/pnote/java/se/java四大特性.md)
       * [从设计角度搞懂PECS原则.blog](/pnote/java/se/从设计角度搞懂PECS原则.blog.md)
       * [函数式接口与lambda表达式的关系.blog](/pnote/java/se/函数式接口与lambda表达式的关系.blog.md)
-      * [序列化手段](/pnote/java/se/序列化手段.md)
       * [重写和重载](/pnote/java/se/重写和重载.md)
    * **jvm**
       * [ClassLoader加载机制](/pnote/java/jvm/ClassLoader加载机制.md)
@@ -171,7 +167,6 @@
       * [java线程中断与停止设计](/pnote/java/thread/java线程中断与停止设计.md)
       * [Java线程的6种状态及切换](/pnote/java/thread/Java线程的6种状态及切换.md)
       * [并发编程基础](/pnote/java/thread/并发编程基础.md)
-      * [监视器和对象锁](/pnote/java/thread/监视器和对象锁.md)
    * **demo**
       * [java-多线程方式三种基本方式](/pnote/java/demo/java-多线程方式三种基本方式.md)
       * [单例模式的dcl问题](/pnote/java/demo/单例模式的dcl问题.md)

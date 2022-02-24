@@ -1,6 +1,6 @@
 <!-- docs/_sidebar -->
+* [**模块首页**](/devops/README)
 
-* [**首页**](/devops/README)
 * **开发**
    * **note**
       * [docker-cmd](/devops/api/cmd/docker-cmd.md)
@@ -32,8 +32,6 @@
       * [2-引入mybatis-plus](/devops/develop/springboot/2-引入mybatis-plus.md)
    * **springcloud**
       * [1-引入包-springcloud-alibaba](/devops/develop/springcloud/1-引入包-springcloud-alibaba.md)
-      * [10-单点登录](/devops/develop/springcloud/10-单点登录.md)
-      * [10.1-单点登录权限](/devops/develop/springcloud/10.1-单点登录权限.md)
       * [2-建立简单的springboot模块](/devops/develop/springcloud/2-建立简单的springboot模块.md)
       * [3-项目引入nacos](/devops/develop/springcloud/3-项目引入nacos.md)
       * [3.2-nacos多服务调用](/devops/develop/springcloud/3.2-nacos多服务调用.md)
@@ -42,9 +40,9 @@
       * [4.2-gateway实现负载均衡](/devops/develop/springcloud/4.2-gateway实现负载均衡.md)
       * [5-feign-微服务之间的相互调用](/devops/develop/springcloud/5-feign-微服务之间的相互调用.md)
       * [6-Spring-Actuator监控](/devops/develop/springcloud/6-Spring-Actuator监控.md)
-      * [7-gateway网关模块使用sentinel限流](/devops/develop/springcloud/7-gateway网关模块使用sentinel限流.md)
       * [7.1-sentinel-gateway模块限流](/devops/develop/springcloud/7.1-sentinel-gateway模块限流.md)
       * [7.2-sentinel非网关模块服务限流](/devops/develop/springcloud/7.2-sentinel非网关模块服务限流.md)
+      * [10-单点登录](/devops/develop/springcloud/10-单点登录.md)
       * [单点登录前端设计](/devops/develop/springcloud/单点登录前端设计.md)
 * **运维**
    * **安装**

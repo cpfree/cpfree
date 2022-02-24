@@ -1,8 +1,15 @@
 ---
 keys: 
-type: copy,blog,trim
+type: blog
 url: <>
 id: 220124-141745
 ---
 
-# 个人原创博客
+
+## 模块简介
+
+当前模块主要是个人学习笔记
+
+## 模块目录
+
+[目录](./_sidebar.md ':include')

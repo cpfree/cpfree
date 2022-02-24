@@ -1,12 +1,15 @@
 ---
 keys: 
-type: copy,blog,trim
+type: blog
 url: <>
 id: 220224-122759
 ---
 
-当前模块 主要以快速 教程为主, 不介绍原理.
 
-architecture
+## 模块简介
 
+当前模块主要是有关架构和分布式方面的相关知识, 总结经验和思想感悟
 
+## 模块目录
+
+[目录](./_sidebar.md ':include')
